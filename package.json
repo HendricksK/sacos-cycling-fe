@@ -1,12 +1,15 @@
 {
   "name": "sacos-cycling-fe",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "generate": "nuxt generate",
-    "start": "nuxt start"
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.14.3"
-  }
+    "nuxt": "^2.14.0"
+  },
+  "devDependencies": {}
 }
