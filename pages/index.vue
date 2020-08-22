@@ -6,7 +6,7 @@
         Sacos Cycling History
       </h1>
       <div class="description">
-        I am trying to create a site that would explain the history of the SACOS cycling team.
+        We are trying to start a historical log of the SACOS cycling team, if you have anything to contribute, please contact the below email.
       </div>
       <div class="links">
         <a
@@ -15,10 +15,13 @@
           rel="noopener noreferrer"
           class="button--sacos_yellow"
         >
-          Contact email: sacoshistoricalsite@gmail.com
+        sacoshistoricalsite@gmail.com
         </a>
       </div>
     </div>
+    <footer class="footer">
+      <div class="description">made with love, using github, hreoku, vue and flask</div>
+    </footer>
   </div>
 </template>
 
@@ -88,4 +91,11 @@ export default {}
   padding-top: 1em;
 }
 
+.footer {
+  bottom: 0;
+  position: absolute;
+  margin: 0 auto;
+  width: auto;
+  text-align: center;
+}
 </style>
