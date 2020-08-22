@@ -15,7 +15,7 @@
           rel="noopener noreferrer"
           class="button--sacos_yellow"
         >
-          Contact email: sacoshistoricalsite@gmail.com
+        sacoshistoricalsite@gmail.com
         </a>
       </div>
     </div>
