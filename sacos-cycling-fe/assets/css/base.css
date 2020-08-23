@@ -102,3 +102,10 @@ a:hover {
 .home-logo {
     background: #e3b602;
 }
+
+.container {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    padding-right: 2em;
+    padding-left: 2em;
+}
