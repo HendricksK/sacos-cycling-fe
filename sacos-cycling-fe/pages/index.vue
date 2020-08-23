@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <div>
       <!-- <Logo /> -->
       <h1 class="title">
@@ -24,9 +24,6 @@
         <!-- <nuxt-link to="/about" class="button--sacos_yellow">about</nuxt-link> -->
       </div>
     </div>
-    <footer class="footer">
-      <div class="description">built using <a href="https://github.com/HendricksK">github</a>, <a href="heroku.com/home">hreoku</a>, <a href="https://nuxtjs.org/">nuxt</a> and <a href="https://flask.palletsprojects.com/">flask</a></div>
-    </footer>
   </div>
 </template>
 

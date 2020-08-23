@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Blog posts</h1>
+    <!-- <h1>Blog posts</h1>
     <button @click="$fetch">
       Refresh
     </button>
@@ -12,21 +12,24 @@
       <li v-for="post of posts" :key="post.id">
         <n-link :to="`/posts/${post.id}`">{{ post.title }}</n-link>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
 <script>
   export default {
-    data() {
-      return {
-        posts: []
-      }
+    layout(context) {
+        return 'default'
     },
-    async fetch() {
-      this.posts = await this.$http.$get(
-        'https://jsonplaceholder.typicode.com/posts'
-      )
-    }
+    // data() {
+    //   return {
+    //     posts: []
+    //   }
+    // },
+    // async fetch() {
+    //   this.posts = await this.$http.$get(
+    //     '#'
+    //   )
+    // }
   }
 </script>

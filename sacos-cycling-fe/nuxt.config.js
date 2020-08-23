@@ -8,6 +8,6 @@ export default {
   ],
   http: {
     // proxyHeaders: false
-  }
+  },
 }
 

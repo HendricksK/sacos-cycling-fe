@@ -3,18 +3,21 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/about.vue",
-    "chunkName": "pages/about"
+    "chunkName": "pages/about",
+    "_name": "_6e325f1f"
   },
   {
     "name": "test",
     "path": "/test",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/test.vue",
-    "chunkName": "pages/test"
+    "chunkName": "pages/test",
+    "_name": "_4e196f70"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_e42b8c38"
   }
 ]
