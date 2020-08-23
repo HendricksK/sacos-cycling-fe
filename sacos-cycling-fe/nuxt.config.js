@@ -1,6 +1,6 @@
 export default {
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000/sacos-cycling-fe/',
+    baseUrl: process.env.BASE_URL || 'https://hendricksk.github.io/sacos-cycling-fe/',
     aboutUrl: 'about',
     title: 'sacos-cycling'
   },

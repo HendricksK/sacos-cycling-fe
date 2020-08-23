@@ -4,29 +4,16 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item p-0" :href="baseurl">
-          <span class="material-icons">
+          <span class="material-icons" style="color:#e3b602">
             directions_bike
           </span>
         </a>
-      </div>
-
-      <div id="navbar" class="navbar-menu">
-        <div class="navbar-start">
-          <!-- <a class="navbar-item" :href="abouturl">
+        <a class="navbar-item" style="color:#e3b602" :href="abouturl">
             About
-          </a> -->
-        </div>
+          </a>
       </div>
     </nav>
-
     <Nuxt />
-    
-    <nav class="navbar is-fixed-bottom footer" role="navigation" aria-label="secondary navigation">
-      <div class="navbar-brand">
-        <!-- navbar items, navbar burger... -->
-        <div class="description mx-3">built using <a href="https://github.com/HendricksK">github</a>, <a href="heroku.com/home">hreoku</a>, <a href="https://nuxtjs.org/">nuxt</a>, <a href="https://flask.palletsprojects.com/">flask</a> and <a href="https://versions.bulma.io/0.7.5/">bulma</a></div>
-      </div>
-    </nav>
   </div>
 </template>
 
@@ -40,6 +27,12 @@
       }  
     },
     head: {
+      meta: [
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1'
+        }
+      ],
       link: [
         {
           rel: 'stylesheet',
