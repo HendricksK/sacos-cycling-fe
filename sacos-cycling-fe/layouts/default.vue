@@ -8,20 +8,6 @@
 </template>
 
 <script>
-  export default {
-    head: {
-      link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://raw.githubusercontent.com/jgthms/bulma/master/css/bulma.css',
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://raw.githubusercontent.com/HendricksK/sacos-cycling-fe/master/sacos-cycling-fe/assets/base.css',
-        }
-      ],
-    }
-}
-
+  export default {};
 </script>
 

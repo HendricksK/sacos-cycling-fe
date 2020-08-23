@@ -9,5 +9,14 @@ export default {
   http: {
     // proxyHeaders: false
   },
+  css: [
+    '@/assets/css/bulma.css', // Adding bulma
+    '@/assets/css/base.css', //base css, will be replaced with bulma eeventually
+  ],
+  buildModules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-176051888-1'
+    }]
+  ]
 }
 
