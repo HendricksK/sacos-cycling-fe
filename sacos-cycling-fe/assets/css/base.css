@@ -1,17 +1,22 @@
 #__nuxt {
-    background: #00000F;
+    background: #FFFFFF;
     margin: 0 auto;
-    min-height: 100vh;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 1em;
+    min-height: 100vh;
 }
 
 #__layout {
     width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
+    min-height: 100vh;
 }
 
 .title {
@@ -19,7 +24,6 @@
     display: block;
     font-weight: 300;
     font-size: 100px;
-    color: #FFF;
     letter-spacing: 1px;
 }
 
@@ -51,20 +55,10 @@
     padding: 0.75em;
 }
 
-.description {
-    color: #FFF;
-    padding-top: 1em;
-}
-
 .footer {
-    bottom: 0;
-    position: absolute;
-    margin: 0 auto;
-    width: 100% !important;
-    text-align: center;
-    padding: 1em;
     color: #fff !important;
     background-color: #000 !important;
+    padding: 0.5em;
 }
 
 a {
@@ -86,4 +80,34 @@ a:hover {
     display: block;
     margin: 0 auto;
     padding: 2em;
+}
+
+.list-no-bullets {
+    list-style: none !important;
+}
+
+.navbar {
+    background-color: #000;
+}
+
+.navbar-dropdown {
+    background-color: #000;
+}
+
+.navbar-item.has-dropdown:hover .navbar-link, a.navbar-item:hover {
+    background-color: #000 !important;
+    color: #e3b602;
+}
+
+.home-logo {
+    background: #e3b602;
+}
+
+.container {
+    padding-top: 5em;
+}
+
+.navbar.is-fixed-bottom {
+    height: 2em;
+    min-height: 2em;
 }

@@ -1,4 +1,9 @@
 export default {
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000/sacos-cycling-fe/',
+    aboutUrl: 'about',
+    title: 'sacos-cycling'
+  },
   target: 'static',
   router: {
     base: '/sacos-cycling-fe/'

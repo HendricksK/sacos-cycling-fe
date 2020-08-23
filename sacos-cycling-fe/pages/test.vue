@@ -21,15 +21,5 @@
     layout(context) {
         return 'default'
     },
-    // data() {
-    //   return {
-    //     posts: []
-    //   }
-    // },
-    // async fetch() {
-    //   this.posts = await this.$http.$get(
-    //     '#'
-    //   )
-    // }
   }
 </script>
