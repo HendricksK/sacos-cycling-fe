@@ -1,27 +1,26 @@
 <template>
   <div class="container">
     <div>
-      <!-- <Logo /> -->
-      <h1 class="title">
-        Sacos Cycling History
-      </h1>
       <div class="description">
-        We are trying to start a historical log of the SACOS cycling team, if you have anything to contribute, please contact the below email.
-        <p class="half-width">
-          When emailing, please add a return email address, the years for which the data / images / articles you are sending cover.
-          Your personal contact information will not be shared on the website, or used for anything other than verifying information if required.
-        </p>
-      </div>
-      <div class="links">
-        <a
-          href="mailto:sacoshistoricalsite@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--sacos_yellow"
-        >
-        sacoshistoricalsite@gmail.com
+        <span class="full-width">Articles:</span>
+        <a href="https://community.bikehub.co.za/features/_/news/industry-news/project-in-place-to-recognise-sa-cycling%E2%80%99s-past-heroes-during-the-apartheid-years-r4313"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="full-width">
+            https://community.bikehub.co.za/features/_/news/industry-news/project-in-place-to-recognise-sa-cycling%E2%80%99s-past-heroes-during-the-apartheid-years-r4313
         </a>
-        <!-- <nuxt-link to="/about" class="button--sacos_yellow">about</nuxt-link> -->
+        <a href="https://community.bikehub.co.za/features/_/news/industry-news/project-in-place-to-recognise-sa-cycling%E2%80%99s-past-heroes-during-the-apartheid-years-r4313"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="full-width">
+            https://community.bikehub.co.za/features/_/news/industry-news/project-in-place-to-recognise-sa-cycling%E2%80%99s-past-heroes-during-the-apartheid-years-r4313
+        </a>
+        <a href="https://community.bikehub.co.za/features/_/news/industry-news/project-in-place-to-recognise-sa-cycling%E2%80%99s-past-heroes-during-the-apartheid-years-r4313"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="full-width">
+            https://community.bikehub.co.za/features/_/news/industry-news/project-in-place-to-recognise-sa-cycling%E2%80%99s-past-heroes-during-the-apartheid-years-r4313
+        </a>
       </div>
     </div>
     <footer class="footer">
@@ -119,11 +118,9 @@ a:hover {
   color: #000;
 }
 
-.half-width {
-  width:  50%;
-  display: block;
-  margin: 0 auto;
-  padding: 2em;
+.full-width {
+    width: 100%;
+    display: block;
 }
 
 </style>
