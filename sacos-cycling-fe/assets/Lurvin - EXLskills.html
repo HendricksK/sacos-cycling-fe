@@ -1,0 +1,4144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lurvin - EXLskills</title>
+<meta name="description" content="Lurvin Live Coding Interview with EXLskills">
+<link rel="canonical" href="https://exlskills.com/learn-en/talent/interviews/:interviewId(\d+)">
+<link rel="alternate" hreflang=en href="https://exlskills.com/learn-en/talent/interviews/13014">
+    <meta property="og:title" content="Lurvin - EXLskills">
+    <meta property="og:description" content="Lurvin Live Coding Interview with EXLskills">
+    <meta property="og:image" content="https://exlskills.com/favicon.png">
+    <meta property="og:url" content="https://exlskills.com/learn-en/talent/interviews/13014">
+    <meta property="og:site_name" content="EXLskills">
+    <meta name="twitter:title" content="Lurvin - EXLskills">
+    <meta name="twitter:description" content="Lurvin Live Coding Interview with EXLskills">
+    <meta name="twitter:image" content="https://exlskills.com/favicon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@EXLskills">
+    <meta name="twitter:image:alt" content="Lurvin">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122120459-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122120459-2');
+    // Add aw ID TODO create more flexible config
+    gtag('config', 'AW-809334371');
+    function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+                window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-809334371/wZeSCKioopABEOPs9YED',
+            'event_callback': callback
+        });
+        return false;
+    }
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-55LZMP9');</script>
+<!-- End Google Tag Manager -->
+    <script type="application/ld+json">
+        {"@context":"http://schema.org","@type":"Organization","name":"EXLskills","description":"The smartest way to learn high-paying tech skills!","legalName":"EXL Inc.","url":"https://exlskills.com","sameAs":"https://exlskills.com","logo":"https://cdn-misc-assets.exlskills.com/atom512blue.png"}
+    </script>
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2333495950204862');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1"
+         src="https://www.facebook.com/tr?id=2333495950204862&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Libs CSS -->
+
+
+<meta name="theme-color" content="#007ACE">
+    <link rel="manifest" href="/learn-en/assets/pwa/manifest-en.json">
+
+<!--- NOTE Deferred CSS is added via scripts (from a noscript element) -->
+
+<!-- jQuery Async Loader -->
+<script>
+    var jQl={q:[],dq:[],gs:[],ready:function(a){"function"==typeof a&&jQl.q.push(a);return jQl},getScript:function(a,c){jQl.gs.push([a,c])},unq:function(){for(var a=0;a<jQl.q.length;a++)jQl.q[a]();jQl.q=[]},ungs:function(){for(var a=0;a<jQl.gs.length;a++)jQuery.getScript(jQl.gs[a][0],jQl.gs[a][1]);jQl.gs=[]},bId:null,boot:function(a){"undefined"==typeof window.jQuery.fn?jQl.bId||(jQl.bId=setInterval(function(){jQl.boot(a)},25)):(jQl.bId&&clearInterval(jQl.bId),jQl.bId=0,jQl.unqjQdep(),jQl.ungs(),jQuery(jQl.unq()), "function"==typeof a&&a())},booted:function(){return 0===jQl.bId},loadjQ:function(a,c){setTimeout(function(){var b=document.createElement("script");b.src=a;document.getElementsByTagName("head")[0].appendChild(b)},1);jQl.boot(c)},loadjQdep:function(a){jQl.loadxhr(a,jQl.qdep)},qdep:function(a){a&&("undefined"!==typeof window.jQuery.fn&&!jQl.dq.length?jQl.rs(a):jQl.dq.push(a))},unqjQdep:function(){if("undefined"==typeof window.jQuery.fn)setTimeout(jQl.unqjQdep,50);else{for(var a=0;a<jQl.dq.length;a++)jQl.rs(jQl.dq[a]); jQl.dq=[]}},rs:function(a){var c=document.createElement("script");document.getElementsByTagName("head")[0].appendChild(c);c.text=a},loadxhr:function(a,c){var b;b=jQl.getxo();b.onreadystatechange=function(){4!=b.readyState||200!=b.status||c(b.responseText,a)};try{b.open("GET",a,!0),b.send("")}catch(d){}},getxo:function(){var a=!1;try{a=new XMLHttpRequest}catch(c){for(var b=["MSXML2.XMLHTTP.5.0","MSXML2.XMLHTTP.4.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],d=0;d<b.length;++d){try{a= new ActiveXObject(b[d])}catch(e){continue}break}}finally{return a}}};if("undefined"==typeof window.jQuery){var $=jQl.ready,jQuery=$;$.getScript=jQl.getScript};
+</script>
+<script async src="https://js.stripe.com/v3/"></script>
+<script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.8/pwacompat.min.js"
+        integrity="sha384-uONtBTCBzHKF84F6XvyC8S0gL8HTkAPeCyBNvfLfsqHh+Kd6s/kaS4BdmNQ5ktp1"
+        crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+<!-- Theme CSS -->
+    <link rel="stylesheet" href="https://cdn-static-assets.exlskills.com/css/theme-dark.min.css" data-toggle="theme" data-theme-mode="dark">
+
+<link rel="stylesheet" href="https://cdn-static-assets.exlskills.com/css/xloader.css" />
+
+<style>
+    .iti-flag {background-image: url("https://cdn-static-assets.exlskills.com/libs/intl-tel-input/v15.0.0/img/flags.png");}
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .iti-flag {background-image: url("https://cdn-static-assets.exlskills.com/libs/intl-tel-input/v15.0.0/img/flags@2x.png");}
+    }
+    .intl-tel-input { width: 100%; }
+
+    .course-badge {
+        background-color: white;
+    }
+
+    @media (min-width: 768px) {
+        .navbar-vertical.navbar-expand-md .navbar-brand {
+            padding-top: 4px;
+        }
+    }
+
+    #content {
+        min-height: calc(100vh - 65.5px);
+    }
+
+    @media (max-width: 768px) {
+        #content {
+            min-height: calc(100vh - 65px);
+        }
+    }
+
+
+    .main-page-wrapper-scrollable {
+        height: calc(100vh - 65.5px);
+        max-height: calc(100vh - 65.5px);
+        overflow: scroll;
+    }
+
+    @media (max-width: 992px) {
+        .main-page-wrapper-scrollable {
+            height: calc(100vh - 65px);
+            max-height: calc(100vh - 65px);
+        }
+    }
+
+    #page-body #topbar-wrapper {
+        height: 65px;
+    }
+    #page-body #topbar {
+        z-index: 999;
+        position: fixed;
+        width: 100%;
+    }
+    #page-body #topbar .container:first-of-type {
+        max-width: none;
+    }
+    @media (max-width: 991px) {
+        #main-page-wrapper #sidebar {
+            display: none;
+        }
+    }
+    @media (min-width: 992px) {
+        #main-page-wrapper #sidebar {
+            margin-top: 69px;
+        }
+        #page-body #topbar-wrapper {
+            height: 69px;
+        }
+    }
+    #main-page-wrapper.exl-hide-sidebar #sidebar {
+        display: none;
+    }
+    #main-page-wrapper.exl-hide-sidebar .main-content {
+        margin-left: 0 !important;
+    }
+    .header {
+        margin-bottom: 1rem !important;
+    }
+    .exl-clrm-back-link {
+        margin-left: -4px;
+        font-size: 0.8rem;
+    }
+    .exl-clrm-back-header {
+        padding-bottom: 3px;
+    }
+    .exl-clrm-header-body {
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+    .exl-clrm-header-tabs {
+        margin-bottom: -0.6rem;
+        border-bottom-width: 0;
+    }
+    .exl-clrm-header-title {
+        font-size: 1.3rem;
+    }
+    .exl-iso-date {
+        display: none;
+    }
+    .exl-from-now {
+        display: none;
+    }
+    .exl-no-scroll {
+        overflow: hidden !important;
+    }
+    .exl-ns-dropdown-menu .card-body {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .exl-require-verified-auth {
+        display: none;
+    }
+    @media (max-width: 991px) {
+        .exl-ns-dropdown-menu {
+            display: none;
+        }
+        .exl-ns-dropdown-menu.show {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            margin: 0;
+        }
+        .exl-ns-dropdown-menu.show .card-header {
+            width: 100vw;
+        }
+        .exl-ns-dropdown-menu.show .card-body {
+            width: 100vw;
+            height: calc(100vh - 49px);
+            max-height: unset;
+            padding-top: 10px;
+            padding-bottom: 70px;
+        }
+    }
+
+    .exl-avatar {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        background-color: #f3f3f3;
+        border-radius: 24px;
+        border: 1px solid #616f93;
+        align-items: center;
+        justify-content: center;
+    }
+    .exl-avatar.instructing {
+        border-color: #1e5f8a;
+    }
+    .exl-avatar .content {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        color: #616f93;
+    }
+    .exl-avatar.instructing .content {
+        color: #1e5f8a;
+    }
+        .list-group-item {
+        overflow: hidden;
+    }
+    .avatar-sm .exl-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    .avatar-sm .exl-avatar .content {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .list-group-item > .clrm-course-row {
+        position: relative;
+    }
+    .clrm-course-row > .instruction-badge {
+        position: absolute;
+        left: -1.25rem;
+        top: -0.75rem;
+        margin-right: 12px;
+    }
+    .clrm-course-row > .instruction-badge::before {
+        display: inline-block;
+        content: ' ';
+        border-top: 15px solid #2E8BFD;
+        border-left: 15px solid #2E8BFD;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid transparent;
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        left: 12px;
+        top: 0px;
+    }
+    .clrm-course-row > .instruction-badge > i.fe {
+        position: relative;
+        font-size: 10px;
+        left: 16px;
+        top: -3px;
+        color: white;
+    }
+
+    .avatar-offline .avatar-img, .avatar-online .avatar-img {
+        /* NOTE: This style must be served from the domain of the application, or the CORS must be updated. This is the most reasonable temp fix */
+        -webkit-mask-image: url(/learn-en/assets/img/masks/avatar-status.svg);
+        mask-image: url(/learn-en/assets/img/masks/avatar-status.svg);
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
+</style></head>
+<body id="page-body" style="overflow: hidden;">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55LZMP9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<style>
+    .StripeElement {
+        background-color: white;
+        height: 40px;
+        padding: 10px 12px;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        box-shadow: 0 1px 3px 0 #e6ebf1;
+        -webkit-transition: box-shadow 150ms ease;
+        transition: box-shadow 150ms ease;
+    }
+
+    .StripeElement--focus {
+        box-shadow: 0 1px 3px 0 #cfd7df;
+    }
+
+    .StripeElement--invalid {
+        border-color: #fa755a;
+    }
+
+    .StripeElement--webkit-autofill {
+        background-color: #fefde5 !important;
+    }
+</style>
+
+<style>
+    @media (max-width: 768px) {
+        #modalManageCoins .btn-sm-w-100 {
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- Modal: Billing -->
+<div class="modal fade" id="modalManageCoins" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-card card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Title -->
+                            <h4 class="card-header-title">
+                                Your EXLskills Coins 💰
+                            </h4>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Close -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+
+                <div class="card-body">
+                    <!-- Coins Balance -->
+                    <div>
+                        <div class="mb-3">
+                            You Have: <strong><span class="text-info" data-toggle="tooltip" data-placement="top"
+                                                    title=""
+                                                    data-original-title="Coins pay for certificates, live courses, and 1-on-1 training">No EXLskills Coins <span
+                                class="fe fe-help-circle mr-4"></span></span></strong>
+                        </div>
+
+                        <form id="purchase-coins-form">
+                            <div class="form-row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <input disabled  type="number" min="1" step="1"
+                                                                          oninput="validity.valid||(value='');"
+                                                                          class="form-control"
+                                                                          id="coins-purchase-amount"
+                                                                          placeholder="# of Coins" required="">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3 coins-purchase-btn-col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button disabled type="submit" id="manage-coins-purchase-btn" class="btn btn-success w-100 text-center form-btn-submit">Purchase ($0)</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                            <form id="coins-card-form">
+                                <div class="">
+                                    <label for="coins-card-element">
+                                        <span data-toggle="tooltip" data-placement="top" title=""
+                                              data-original-title="Your card will be charged only for purchases you make on EXLskills. You can remove it at any time.">Credit or Debit Card <span
+                                                class="fe fe-help-circle mr-4"></span></span>
+                                    </label>
+                                    <div id="coins-card-element">
+                                        <!-- A Stripe Element will be inserted here. -->
+                                    </div>
+
+                                    <!-- Used to display form errors. -->
+                                    <div id="coins-card-errors" role="alert" class="text-danger"></div>
+                                </div>
+
+                                <button type="submit"
+                                        class="btn btn-primary float-right mt-4 btn-sm-w-100 form-btn-submit">Add Card
+                                </button>
+                            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $(function() {
+            function setupStripeElements() {
+
+                // Create a Stripe client.
+                var stripe = Stripe('pk_live_FWkdloGgIAZ7MfVqcbmo1YmO');
+
+                // Create an instance of Elements.
+                var elements = stripe.elements();
+
+                // Custom styling can be passed to options when creating an Element.
+                // (Note that this demo uses a wider set of styles than the guide below.)
+                var style = {
+                    base: {
+                        color: '#32325d',
+                        lineHeight: '18px',
+                        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                        fontSmoothing: 'antialiased',
+                        fontSize: '16px',
+                        '::placeholder': {
+                            color: '#aab7c4'
+                        }
+                    },
+                    invalid: {
+                        color: '#fa755a',
+                        iconColor: '#fa755a'
+                    }
+                };
+
+                // Create an instance of the card Element.
+                var card = elements.create('card', {style: style});
+
+                // Add an instance of the card Element into the `coins-card-element` <div>.
+                card.mount('#coins-card-element');
+
+                // Handle real-time validation errors from the card Element.
+                card.addEventListener('change', function (event) {
+                    var displayError = document.getElementById('coins-card-errors');
+                    if (event.error) {
+                        displayError.textContent = event.error.message;
+                    } else {
+                        displayError.textContent = '';
+                    }
+                });
+
+                function stripeTokenHandler(tkn) {
+                    $.postJSON('https://auth-api.exlskills.com/me/credits/enroll', {
+                        stripeToken: {token: tkn}
+                    }, function (data) {
+                        refreshJWT(function () {
+                            window.location.reload();
+                        });
+                    });
+                }
+
+                // Handle form submission.
+                $('#coins-card-form').submit(function (event) {
+                    event.preventDefault();
+                    $(".form-btn-submit", this).addClass('is-loading');
+                    $(".form-btn-submit", this).attr('disabled', 'disabled');
+                    var form = this;
+                    stripe.createToken(card).then(function (result) {
+                        if (result.error) {
+                            $(".form-btn-submit", form).removeClass('is-loading');
+                            $(".form-btn-submit", form).attr('disabled', false);
+                            // Inform the user if there was an error.
+                            var errorElement = document.getElementById('coins-card-errors');
+                            errorElement.textContent = result.error.message;
+                        } else {
+                            // Send the token to your server.
+                            stripeTokenHandler(result.token);
+                        }
+                    }, function (reject) {
+                        $(".form-btn-submit", form).removeClass('is-loading');
+                        $(".form-btn-submit", form).attr('disabled', false);
+                    });
+                });
+            }
+
+            var stripeAwait = setInterval(function() {
+                if (window.Stripe) {
+                    clearInterval(stripeAwait);
+                    setupStripeElements();
+                }
+            }, 100);
+        });
+    </script>
+<style>
+    @media (max-width: 768px) {
+        #modalCheckout .btn-sm-w-100 {
+            width: 100%;
+        }
+    }
+    #checkout-purchase-headline-wrapper {
+        margin-top: 2px;
+    }
+
+    #checkout-shipping-form label {
+        margin-top: 6px;
+    }
+</style>
+
+<!-- Modal: Billing -->
+<div class="modal fade" id="modalCheckout" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-card card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Title -->
+                            <h4 class="card-header-title">
+                                Complete Checkout
+                            </h4>
+                            <div id="checkout-purchase-headline-wrapper">
+                                <small id="checkout-purchase-headline" class="text-secondary">
+
+                                </small>
+                            </div>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Close -->
+                            <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+
+                <div class="card-body">
+                    <div class="col text-center">
+                        <h2 style="margin-bottom: 10px;">Be Amazing With EXLskills 🎓</h2>
+                    </div>
+                    <div class="col text-center">
+                        <img src="https://cdn-static-assets.exlskills.com/img/illustrations/happiness.svg" alt="..." class="img-fluid mb-4" style="max-width: 180px;">
+                    </div>
+                        <form id="checkout-shipping-form" style="display: none;">
+                            <h4>Shipping Information</h4>
+
+                            <label for="checkout-shipping-form-full-name">Full Name</label>
+                            <input class="form-control" id="checkout-shipping-form-full-name" type="text" required>
+
+                            <label for="checkout-shipping-form-addr-1">Address Line 1</label>
+                            <input class="form-control" id="checkout-shipping-form-addr-1" type="text" required>
+
+                            <label for="checkout-shipping-form-addr-2">Address Line 2 (Optional)</label>
+                            <input class="form-control" id="checkout-shipping-form-addr-2" type="text">
+
+                            <label for="checkout-shipping-form-country">Country</label>
+                            <select id="checkout-shipping-form-country" class="form-control" data-toggle="select">
+                                <option>United States of America</option>
+                                <option>Canada</option>
+                            </select>
+
+                            <label for="checkout-shipping-form-city">City</label>
+                            <input class="form-control" id="checkout-shipping-form-city" type="text" required>
+
+                            <label for="checkout-shipping-form-state">State/Province</label>
+                            <input class="form-control" id="checkout-shipping-form-state" type="text" required>
+
+                            <label for="checkout-shipping-form-zip-code">Zip/Postal Code</label>
+                            <input class="form-control" id="checkout-shipping-form-zip-code" type="text" minlength="5" required>
+                            <br />
+                        </form>
+                        <div>
+                            <form style="display: none;" id="complete-checkout-form">
+                                <button type="submit" class="btn btn-primary w-100 text-center form-btn-submit"><span class="checkout-pay-msg"></span> </button>
+                            </form>
+                        </div>
+                            <form style="display: none;" id="checkout-card-form">
+                                <div class="">
+                                    <label for="checkout-card-element">
+                                        <span data-toggle="tooltip" data-placement="top" title=""
+                                              data-original-title="Your card will be charged only for purchases you make on EXLskills. You can remove it at any time.">Credit or Debit Card <span
+                                                class="fe fe-help-circle mr-4"></span></span>
+                                    </label>
+                                    <div id="checkout-card-element">
+                                        <!-- A Stripe Element will be inserted here. -->
+                                    </div>
+
+                                    <!-- Used to display form errors. -->
+                                    <div id="checkout-card-errors" role="alert" class="text-danger"></div>
+                                </div>
+
+                                <button type="submit"
+                                        class="btn btn-primary float-right mt-4 w-100 form-btn-submit">Add Card &amp; <span class="checkout-pay-msg"></span>
+                                </button>
+                            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function getCheckoutItem() {
+        return JSON.parse(decodeURIComponent(window.location.hash.replace('#!modalCheckout=', '')));
+    }
+
+    function renderShippingInfoForm(item) {
+      var $shippingForm = $('#checkout-shipping-form');
+      if (!item.requireShippingInfo) {
+        $shippingForm.hide();
+        return;
+      }
+      $shippingForm.show();
+    }
+
+    function getShippingInfoFromForm() {
+      if (!document.getElementById('checkout-shipping-form').reportValidity()) {
+        return {valid: false}
+      }
+      return {
+          country: $('#checkout-shipping-form-country').val(),
+          full_name: $('#checkout-shipping-form-full-name').val(),
+          addr_1: $('#checkout-shipping-form-addr-1').val(),
+          addr_2: $('#checkout-shipping-form-addr-2').val(),
+          city: $('#checkout-shipping-form-city').val(),
+          state: $('#checkout-shipping-form-state').val(),
+          zip_code: $('#checkout-shipping-form-zip-code').val(),
+          valid: true
+      };
+    }
+</script>
+<script>
+    $(function() {
+        $('#modalCheckout').on('show.bs.modal', function() {
+            $('#checkout-login-link').attr('href', '#!modalAuthenticate='+encodeURIComponent(window.location.href));
+            var item = getCheckoutItem();
+            if (!false) {
+                if (1 < 1000) {
+                    if (item.quantity*item.displayUnitCost <= 0) {
+                        $('#complete-checkout-form').show();
+                        $('#checkout-card-form').hide();
+                    } else {
+                        $('#checkout-card-form').show();
+                        $('#complete-checkout-form').hide();
+                    }
+                } else {
+                    $('#complete-checkout-form').show();
+                    $('#checkout-card-form').hide();
+                }
+            }
+            $('#checkout-purchase-headline').text(item.quantity + " x " + item.displayName);
+            var extraCost = (item.quantity * item.displayUnitCost) - 0;
+            if (extraCost < 0) {
+                extraCost = 0;
+            }
+            $('#you-will-save-with-coins').text("🎉 You&#x27;ll Save $" + (Math.round(((item.quantity * item.displayUnitCost)-extraCost)*100)/100) + " with your EXLskills Coins! ");
+            if (extraCost === 0) {
+                $('#modalCheckout .checkout-pay-msg').text("Purchase for FREE");
+            } else {
+                $('#modalCheckout .checkout-pay-msg').text("Pay $" + extraCost);
+            }
+
+            renderShippingInfoForm(item);
+        });
+    });
+</script>
+<script>
+    function completeCheckoutForModal(errCallback) {
+        // TODO check if we need shipping details, if so get them. Check that shipping_info.valid and then delete that extra field.
+        var item = getCheckoutItem();
+        if (item.requireShippingInfo) {
+            item.options.shipping_info = getShippingInfoFromForm();
+            if (!item.options.shipping_info.valid) {
+                // TODO Show the user an error toast and fail out
+                console.error("Shipping info is NOT valid");
+                return;
+            }
+            delete item.options.shipping_info.valid;
+        }
+        $.postJSON('https://auth-api.exlskills.com/purchase', {item: item}, function (data) {
+            refreshJWT(function () {
+                window.localStorage.setItem('toastOnLoad', JSON.stringify({intent: 'success', message: 'Thank you for your purchase! You will receive an email with your order confirmation and all further instructions as necessary.'}));
+                window.location.hash = '';
+                window.location.reload();
+            });
+        }, function (err) {
+            errCallback(err);
+        });
+    }
+</script>
+    <script>
+        $(function () {
+            function setupStripeElements() {
+                // Create a Stripe client.
+                var stripe = Stripe('pk_live_FWkdloGgIAZ7MfVqcbmo1YmO');
+
+                // Create an instance of Elements.
+                var elements = stripe.elements();
+
+                // Custom styling can be passed to options when creating an Element.
+                // (Note that this demo uses a wider set of styles than the guide below.)
+                var style = {
+                    base: {
+                        color: '#32325d',
+                        lineHeight: '18px',
+                        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                        fontSmoothing: 'antialiased',
+                        fontSize: '16px',
+                        '::placeholder': {
+                            color: '#aab7c4'
+                        }
+                    },
+                    invalid: {
+                        color: '#fa755a',
+                        iconColor: '#fa755a'
+                    }
+                };
+
+                // Create an instance of the card Element.
+                var card = elements.create('card', {style: style});
+
+                // Add an instance of the card Element into the `checkout-card-element` <div>.
+                card.mount('#checkout-card-element');
+
+                // Handle real-time validation errors from the card Element.
+                card.addEventListener('change', function (event) {
+                    var displayError = document.getElementById('checkout-card-errors');
+                    if (event.error) {
+                        displayError.textContent = event.error.message;
+                    } else {
+                        displayError.textContent = '';
+                    }
+                });
+
+                // Handle form submission.
+                $('#checkout-card-form').submit(function (event) {
+                    event.preventDefault();
+                    $(".form-btn-submit", this).addClass('is-loading');
+                    $(".form-btn-submit", this).attr('disabled', 'disabled');
+                    var form = this;
+                    stripe.createToken(card).then(function (result) {
+                        if (result.error) {
+                            $(".form-btn-submit", form).removeClass('is-loading');
+                            $(".form-btn-submit", form).attr('disabled', false);
+                            // Inform the user if there was an error.
+                            var errorElement = document.getElementById('checkout-card-errors');
+                            errorElement.textContent = result.error.message;
+                        } else {
+                            // Send the token to your server.
+                            $.postJSON('https://auth-api.exlskills.com/me/credits/enroll', {
+                                stripeToken: {token: result.token}
+                            }, function (data) {
+                                refreshJWT(function () {
+                                    completeCheckoutForModal(function (err) {
+                                        $(".form-btn-submit", form).removeClass('is-loading');
+                                        $(".form-btn-submit", form).attr('disabled', false);
+                                    });
+                                });
+                            });
+                        }
+                    }, function (reject) {
+                        $(".form-btn-submit", form).removeClass('is-loading');
+                        $(".form-btn-submit", form).attr('disabled', false);
+                    });
+                });
+            }
+            var stripeAwait = setInterval(function() {
+                if (window.Stripe) {
+                    clearInterval(stripeAwait);
+                    setupStripeElements();
+                }
+            }, 100);
+        });
+    </script>
+<style>
+    @media (max-width: 768px) {
+        #modalAddCard .btn-sm-w-100 {
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- Modal: Billing -->
+<div class="modal fade" id="modalAddCard" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-card card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Title -->
+                            <h4 class="card-header-title">
+                                Add a Payment Method 💰
+                            </h4>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Close -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+
+                <div class="card-body">
+                            <form id="add-modal-add-card-form">
+                                <div class="">
+                                    <label for="add-modal-card-element">
+                                        <span data-toggle="tooltip" data-placement="top" title=""
+                                              data-original-title="Your card will be charged only for purchases you make on EXLskills. You can remove it at any time.">Credit or Debit Card <span
+                                                class="fe fe-help-circle mr-4"></span></span>
+                                    </label>
+                                    <div id="add-modal-card-element">
+                                        <!-- A Stripe Element will be inserted here. -->
+                                    </div>
+
+                                    <!-- Used to display form errors. -->
+                                    <div id="add-modal-card-errors" role="alert" class="text-danger"></div>
+                                    <div style="width: 100%; height: 6px;"></div>
+                                    <small class="text-secondary">You won&#x27;t be charged until you make a purchase</small>
+                                </div>
+
+                                <button type="submit"
+                                        class="btn btn-primary float-right mt-4 btn-sm-w-100 form-btn-submit">Add Card
+                                </button>
+                            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $(function() {
+            function setupStripeElements() {
+
+                // Create a Stripe client.
+                var stripe = Stripe('pk_live_FWkdloGgIAZ7MfVqcbmo1YmO');
+
+                // Create an instance of Elements.
+                var elements = stripe.elements();
+
+                // Custom styling can be passed to options when creating an Element.
+                // (Note that this demo uses a wider set of styles than the guide below.)
+                var style = {
+                    base: {
+                        color: '#32325d',
+                        lineHeight: '18px',
+                        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                        fontSmoothing: 'antialiased',
+                        fontSize: '16px',
+                        '::placeholder': {
+                            color: '#aab7c4'
+                        }
+                    },
+                    invalid: {
+                        color: '#fa755a',
+                        iconColor: '#fa755a'
+                    }
+                };
+
+                // Create an instance of the card Element.
+                var card = elements.create('card', {style: style});
+
+                // Add an instance of the card Element into the `add-modal-card-element` <div>.
+                card.mount('#add-modal-card-element');
+
+                // Handle real-time validation errors from the card Element.
+                card.addEventListener('change', function (event) {
+                    var displayError = document.getElementById('add-modal-card-errors');
+                    if (event.error) {
+                        displayError.textContent = event.error.message;
+                    } else {
+                        displayError.textContent = '';
+                    }
+                });
+
+                function stripeTokenHandler(tkn) {
+                    $.postJSON('https://auth-api.exlskills.com/me/credits/enroll', {
+                        stripeToken: {token: tkn}
+                    }, function (data) {
+                        refreshJWT(function () {
+                            window.location.reload();
+                        });
+                    });
+                }
+
+                // Handle form submission.
+                $('#add-modal-add-card-form').submit(function (event) {
+                    event.preventDefault();
+                    $(".form-btn-submit", this).addClass('is-loading');
+                    $(".form-btn-submit", this).attr('disabled', 'disabled');
+                    var form = this;
+                    stripe.createToken(card).then(function (result) {
+                        if (result.error) {
+                            $(".form-btn-submit", form).removeClass('is-loading');
+                            $(".form-btn-submit", form).attr('disabled', false);
+                            // Inform the user if there was an error.
+                            var errorElement = document.getElementById('add-modal-card-errors');
+                            errorElement.textContent = result.error.message;
+                        } else {
+                            // Send the token to your server.
+                            stripeTokenHandler(result.token);
+                        }
+                    }, function (reject) {
+                        $(".form-btn-submit", form).removeClass('is-loading');
+                        $(".form-btn-submit", form).attr('disabled', false);
+                    });
+                });
+            }
+            var stripeAwait = setInterval(function() {
+                if (window.Stripe) {
+                    clearInterval(stripeAwait);
+                    setupStripeElements();
+                }
+            }, 100);
+        });
+    </script>
+<!-- Modal: Callout looking for a job -->
+<div class="modal fade" id="modalCalloutLookingForJob" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-card card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Title -->
+                            <h4 class="card-header-title">
+                                Get a Tech Job With EXLskills&nbsp;🎓
+                            </h4>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Close -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+
+                <div class="card-body">
+                    <!-- Coins Balance -->
+                    <div>
+                        <div class="col text-center">
+                            <h2 style="margin-bottom: 10px;">Eligible Applicants Receive Guaranteed Job Placement With a Digital Diploma!* 🎓</h2>
+                        </div>
+                        <div class="col text-center">
+                            <img src="https://cdn-static-assets.exlskills.com/img/illustrations/happiness.svg" alt="..." class="img-fluid mb-4" style="max-width: 180px;">
+                        </div>
+                        <h3 class="text-center text-secondary">
+                            When You Begin Your Early Application Today, It&#x27;s Free!
+                        </h3>
+                        <form id="get-job-campaign-form">
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <input type="email" placeholder="Your email address" class="form-control co-email-addr" required>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="submit" class="btn btn-success w-100 text-center">Show Me How to Apply!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <small class="text-secondary mt-2">
+                            * If accepted, final terms will be provided in your personal offer of enrollment
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Callout already have a tech job (want raise) -->
+<div class="modal fade" id="modalCalloutLookingForRaise" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-card card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Title -->
+                            <h4 class="card-header-title">
+                                Earn More Money With EXLskills&nbsp;🎓
+                            </h4>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Close -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+
+                <div class="card-body">
+                    <!-- Coins Balance -->
+                    <div>
+                        <div class="col text-center">
+                            <h2 style="margin-bottom: 10px;">Eligible Applicants Receive Guaranteed Salary Raise With a Digital Diploma!* 🎓</h2>
+                        </div>
+                        <div class="col text-center">
+                            <img src="https://cdn-static-assets.exlskills.com/img/illustrations/happiness.svg" alt="..." class="img-fluid mb-4" style="max-width: 180px;">
+                        </div>
+                        <h3 class="text-center text-secondary">
+                            When You Begin Your Early Application Today, It&#x27;s Free!
+                        </h3>
+                        <form id="get-raise-campaign-form">
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <input type="email" placeholder="Your email address" class="form-control co-email-addr" required>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="submit" class="btn btn-success w-100 text-center">Show Me How to Apply!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <small class="text-secondary mt-2">
+                            * If accepted, final terms will be provided in your personal offer of enrollment
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        $("#get-job-campaign-form").submit(function(e) {
+            e.preventDefault();
+            var $self = $(this);
+            subscribeToMailingList($("#" + $self.attr('id') + " .co-email-addr").val(), 'co_get_job_dd_sub_0', function() {
+                $("#" + $self.attr('id') + " .co-email-addr").val("");
+                $("#modalCalloutLookingForRaise").modal('hide');
+                window.localStorage.setItem('techJobCalloutTopAction', 'co_get_job_dd_sub_0');
+                window.localStorage.setItem('toastOnLoad', JSON.stringify({intent: 'success', message: "Check your inbox for an email from EXLskills with information about our Digital Diploma program!", title: "You&#x27;re on your way!"}));
+                window.location.reload();
+            }, function() {
+                toastr.error("Please make sure you entered a valid email address", "Oops, something went wrong!");
+            });
+            return false;
+        });
+    });
+</script>
+
+<script>
+    $(function() {
+        $("#get-raise-campaign-form").submit(function(e) {
+            e.preventDefault();
+            var $self = $(this);
+            subscribeToMailingList($("#" + $self.attr('id') + " .co-email-addr").val(), 'co_get_raise_dd_sub_0', function() {
+                $("#" + $self.attr('id') + " .co-email-addr").val("");
+                $("#modalCalloutLookingForJob").modal('hide');
+                window.localStorage.setItem('techJobCalloutTopAction', 'co_get_raise_dd_sub_0');
+                window.localStorage.setItem('toastOnLoad', JSON.stringify({intent: 'success', message: "Check your inbox for an email from EXLskills with information about our Digital Diploma program!", title: "You&#x27;re on your way!"}));
+                window.location.reload();
+            }, function() {
+                toastr.error("Please make sure you entered a valid email address", "Oops, something went wrong!");
+            });
+            return false;
+        });
+    });
+</script><!-- Modal: Callout looking for a job -->
+<div class="modal fade" id="modalAuthenticate" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-card card" style="overflow-y: unset;">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Title -->
+                            <h4 id="modal-authenticate-header-title" class="card-header-title">
+                                Login/Sign Up&nbsp;🔒
+                            </h4>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Close -->
+                            <button id="modal-authenticate-close-button" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+
+                <div class="card-body">
+                    <div>
+                        <form id="enter-phone-form">
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <input placeholder="Enter your mobile number" required type="tel" class="form-control" id="auth-modal-phone">
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button id="phone-form-btn-submit" type="submit" class="btn btn-success w-100 text-center">Send Code</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="text-secondary mt-2">
+                                You&#x27;ll receive a one-time code via SMS to login or sign up. <a id="other-logins-link" href="#!modalAuthenticate">Login with email instead.</a>
+                            </small>
+                        </form>
+                        <form style="display: none;" id="enter-phone-code-form">
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <input id="phone-code-input" autocomplete="off" class="form-control" placeholder="Enter the code you receive" minlength="5" maxlength="5" type="text" required>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button id="phone-code-form-btn-submit" type="submit" class="btn btn-success w-100 text-center">Verify Code</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <small class="text-secondary">
+                                    <a id="phone-code-auth-back" href="#!modalAuthenticate">Back</a> | <a id="phone-code-auth-resend" href="#!modalAuthenticate">Resend Code</a>
+                                </small>
+                            </div>
+                        </form>
+                        <form style="display: none;" id="phone-auth-update-profile-form">
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <input id="phone-auth-update-name-input" class="form-control" placeholder="Enter your name" type="text" required>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button id="phone-auth-update-profile-form-btn-submit" type="submit" class="btn btn-success w-100 text-center">Update Profile</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <small class="text-secondary">
+                                    <a id="phone-update-profile-skip" href="#">Skip Profile Update</a>
+                                </small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        var $enterPhoneForm = $("#enter-phone-form");
+        var $enterPhoneCodeForm = $("#enter-phone-code-form");
+        var $phoneCodeAuthResendLink = $('#phone-code-auth-resend');
+        var $updateProfileForm = $('#phone-auth-update-profile-form');
+        var $closeButton = $('#modal-authenticate-close-button');
+        var $phoneCodeInput = $("#phone-code-input");
+        var $phoneAuthUpdateNameInput = $('#phone-auth-update-name-input');
+        var currentPhoneNumber = null;
+        var currentCountryIso2 = null;
+        $('#modalAuthenticate').on('shown.bs.modal', function (e) {
+            if (currentPhoneNumber) {
+                $phoneCodeInput.focus();
+            }
+        });
+        function requestTextCode(phoneNumber, countryIso2, onSuccess, onFailure) {
+            $.postJSON('https://auth-api.exlskills.com/auth/phone', {
+                phoneNumber: phoneNumber,
+                countryIso2: countryIso2
+            }, onSuccess, onFailure);
+        }
+        function verifyTextCode(code, onSuccess, onFailure) {
+            $.postJSON('https://auth-api.exlskills.com/auth/phone/code', {
+                code: code
+            }, onSuccess, onFailure);
+        }
+        function updateUserProfile(fullName, onSuccess, onFailure) {
+            // TODO non en locales?
+            updateUserProfileGQL('en', {
+                primary_locale: 'en',
+                full_name: fullName
+            }, function() {
+                // Refresh token
+                $.postJSON('https://auth-api.exlskills.com/auth/jwt-refresh', {}, onSuccess, onFailure);
+            }, function(e) {
+                onFailure(e)
+            });
+        }
+        function finishAuthAndReload() {
+            window.localStorage.setItem('toastOnLoad', JSON.stringify({intent: 'success', message: "We hope you love using EXLskills! If you have any questions, chat with our support team anytime!", title: "Successfully authenticated"}));
+            if (window.location.hash.substr(20).length > 0) {
+                window.location.href = decodeURIComponent(window.location.hash.substr(20));
+            } else {
+                window.location.hash = '';
+            }
+            window.location.reload();
+        }
+        $enterPhoneForm.submit(function(e) {
+            e.preventDefault();
+            if (!_authModalTelInput.isValidNumber()) {
+                toastr.error("Please make sure you enter a valid phone number", "Invalid phone number");
+                return;
+            }
+            currentPhoneNumber = _authModalTelInput.getNumber();
+            currentCountryIso2 = _authModalTelInput.getSelectedCountryData().iso2;
+            var $subBtn = $("#phone-form-btn-submit");
+            $subBtn.addClass('is-loading');
+            $subBtn.attr('disabled', 'disabled');
+            requestTextCode(currentPhoneNumber, currentCountryIso2, function() {
+                $subBtn.removeClass('is-loading');
+                $subBtn.attr('disabled', false);
+                toastr.success("You should recieve your code via SMS shortly", "Secure code sent");
+                $enterPhoneForm.hide();
+                $enterPhoneCodeForm.show();
+                $phoneCodeInput.focus();
+            }, function() {
+                $subBtn.removeClass('is-loading');
+                $subBtn.attr('disabled', false);
+                toastr.error("Please ensure you provided a valid phone number. If this issue persists please contact support", "Error sending code");
+            });
+            return false;
+        });
+        $('#phone-code-auth-back').click(function() {
+            currentPhoneNumber = null;
+            currentCountryIso2 = null;
+            $enterPhoneCodeForm.hide();
+            $enterPhoneForm.show();
+        });
+        $phoneCodeAuthResendLink.click(function() {
+            if (!currentPhoneNumber) {
+                return
+            }
+            $phoneCodeAuthResendLink.attr('disabled', true);
+            requestTextCode(currentPhoneNumber, currentCountryIso2, function() {
+                $phoneCodeAuthResendLink.attr('disabled', false);
+                toastr.success("You should recieve your code via SMS shortly", "Secure code sent");
+                $enterPhoneForm.hide();
+                $enterPhoneCodeForm.show();
+            }, function() {
+                $phoneCodeAuthResendLink.attr('disabled', false);
+                toastr.error("Please ensure you provided a valid phone number. If this issue persists please contact support", "Error sending code");
+            });
+        });
+        $("#other-logins-link").click(function(e) {
+            var redirectPath = '';
+            if (window.location.hash.substr(20).length > 0) {
+                // have something after #!modalAuthenticate=
+                var secondRedirect = decodeURIComponent(window.location.hash.substr(20));
+                if (secondRedirect.startsWith('/')) {
+                    redirectPath = secondRedirect;
+                } else if (!secondRedirect.startsWith('#')){
+                    redirectPath = window.location.pathname + '/' + secondRedirect;
+                } else {
+                    redirectPath = window.location.pathname + secondRedirect;
+                }
+            } else {
+                redirectPath = window.location.pathname;
+            }
+
+            window.location.href = '/learn-en/auth/email-input?redirect=' +
+                    encodeURIComponent(window.location.protocol + '//' +
+                                       window.location.host +
+                                       redirectPath);
+        });
+        $enterPhoneCodeForm.submit(function(e) {
+            e.preventDefault();
+            var $subBtn = $("#phone-code-form-btn-submit");
+            $subBtn.addClass('is-loading');
+            $subBtn.attr('disabled', 'disabled');
+            verifyTextCode($phoneCodeInput.val(), function(resp) {
+                $subBtn.removeClass('is-loading');
+                $subBtn.attr('disabled', false);
+                if (resp && resp.promptFullName) {
+                    $enterPhoneCodeForm.hide();
+                    $updateProfileForm.show();
+                    $phoneAuthUpdateNameInput.focus();
+                    $closeButton.hide();
+                } else {
+                    finishAuthAndReload();
+                }
+            }, function() {
+                $subBtn.removeClass('is-loading');
+                $subBtn.attr('disabled', false);
+                toastr.error("Please make sure your code is correct and was sent within the last 5-minutes. Please try again", "Code invalid");
+            });
+            return false;
+        });
+        $updateProfileForm.submit(function(e) {
+            e.preventDefault();
+            var $subBtn = $("#phone-auth-update-profile-form-btn-submit");
+            $subBtn.addClass('is-loading');
+            $subBtn.attr('disabled', 'disabled');
+            updateUserProfile($phoneAuthUpdateNameInput.val(), function(resp) {
+                $subBtn.removeClass('is-loading');
+                $subBtn.attr('disabled', false);
+                finishAuthAndReload();
+            }, function() {
+                $subBtn.removeClass('is-loading');
+                $subBtn.attr('disabled', false);
+                toastr.error("Ensure that the information provided is valid", "Oops, something went wrong!");
+            });
+            return false;
+        });
+        $("#phone-update-profile-skip").click(function(e) {
+            // Allow continuing without updating profile
+            finishAuthAndReload()
+        });
+    });
+</script><!-- Modal: Callout looking for a job -->
+<div class="modal fade" id="modalAuthenticateLearn" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-card card" style="overflow-y: unset;">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Title -->
+                            <h4 id="modal-authenticate-learn-header-title" class="card-header-title">
+                                Login/Sign Up&nbsp;🔒
+                            </h4>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Close -->
+                            <button id="modal-authenticate-learn-close-button" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+
+                <div class="card-body">
+                    <div>
+                        <form id="enter-phone-learn-form">
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <input placeholder="Enter your mobile number" required type="tel" class="form-control" id="auth-learn-modal-phone" autofocus>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button id="phone-learn-form-btn-submit" type="submit" class="btn btn-success w-100 text-center">Send Code</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="text-secondary mt-2">
+                                You&#x27;ll receive a one-time code via SMS to login or sign up. <a id="other-logins-learn-link" class="btn">Login with email instead.</a>
+                            </small>
+                        </form>
+                        <form style="display: none;" id="enter-phone-code-learn-form">
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <input id="phone-code-learn-input" autocomplete="off" class="form-control" placeholder="Enter the code you receive" minlength="5" maxlength="5" type="text" required autofocus>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button id="phone-code-learn-form-btn-submit" type="submit" class="btn btn-success w-100 text-center">Verify Code</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <small class="text-secondary">
+                                    <a id="phone-code-auth-learn-back" class="btn">Back</a> | <a id="phone-code-auth-learn-resend" class="btn">Resend Code</a>
+                                </small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        var $enterPhoneLearnForm = $("#enter-phone-learn-form");
+        var $enterPhoneCodeLearnForm = $("#enter-phone-code-learn-form");
+        var $phoneCodeAuthLearnResendLink = $('#phone-code-auth-learn-resend');
+        var $phoneCodeLearnInput = $("#phone-code-learn-input");
+        var learnCurrentPhoneNumber = null;
+        var learnCurrentCountryIso2 = null;
+        var learnLinkUrl = null;
+        $('#modalAuthenticateLearn').on('shown.bs.modal', function (e) {
+            if (window.location.hash.substr(25).length > 0) {
+                learnLinkUrl = window.location.hash;
+            } else {
+                window.location.href = '';
+            }
+            if (learnCurrentPhoneNumber) {
+                $phoneCodeLearnInput.focus();
+            }
+        });
+        function requestTextCode(phoneNumber, countryIso2, onSuccess, onFailure) {
+            $.postJSON('https://auth-api.exlskills.com/auth/phone', {
+                phoneNumber: phoneNumber,
+                countryIso2: countryIso2
+            }, onSuccess, onFailure);
+        }
+        function verifyTextCode(code, onSuccess, onFailure) {
+            $.postJSON('https://auth-api.exlskills.com/auth/phone/code', {
+                code: code
+            }, onSuccess, onFailure);
+        }
+
+        function finishAuthAndReload() {
+            window.localStorage.setItem('toastOnLoad', JSON.stringify({intent: 'success', message: "We hope you love using EXLskills! If you have any questions, chat with our support team anytime!", title: "Successfully authenticated"}));
+            if (window.location.hash.substr(25).length > 0) {
+                window.location.href = decodeURIComponent(window.location.hash.substr(25));
+            } else {
+                window.location.hash = '';
+                window.location.reload()
+            }
+        }
+
+        $enterPhoneLearnForm.submit(function(e) {
+            e.preventDefault();
+            if (!_authModalLearnTelInput.isValidNumber()) {
+                toastr.error("Please make sure you enter a valid phone number", "Invalid phone number");
+                return;
+            }
+            learnCurrentPhoneNumber = _authModalLearnTelInput.getNumber();
+            learnCurrentCountryIso2 = _authModalLearnTelInput.getSelectedCountryData().iso2;
+            var $subBtn = $("#phone-learn-form-btn-submit");
+            $subBtn.addClass('is-loading');
+            $subBtn.attr('disabled', 'disabled');
+            requestTextCode(learnCurrentPhoneNumber, learnCurrentCountryIso2, function() {
+                $subBtn.removeClass('is-loading');
+                $subBtn.attr('disabled', false);
+                toastr.success("You should recieve your code via SMS shortly", "Secure code sent");
+                $enterPhoneLearnForm.hide();
+                $enterPhoneCodeLearnForm.show();
+                $phoneCodeLearnInput.focus();
+            }, function() {
+                $subBtn.removeClass('is-loading');
+                $subBtn.attr('disabled', false);
+                toastr.error("Please ensure you provided a valid phone number. If this issue persists please contact support", "Error sending code");
+            });
+            return false;
+        });
+        $('#phone-code-auth-learn-back').click(function() {
+            learnCurrentPhoneNumber = null;
+            learnCurrentCountryIso2 = null;
+            $enterPhoneCodeLearnForm.hide();
+            $enterPhoneLearnForm.show();
+            window.location.href = learnLinkUrl;
+        });
+        $phoneCodeAuthLearnResendLink.click(function() {
+            if (!learnCurrentPhoneNumber) {
+                window.location.href = learnLinkUrl;
+                return
+            }
+            $phoneCodeAuthLearnResendLink.attr('disabled', true);
+            requestTextCode(learnCurrentPhoneNumber, learnCurrentCountryIso2, function() {
+                $phoneCodeAuthLearnResendLink.attr('disabled', false);
+                toastr.success("You should recieve your code via SMS shortly", "Secure code sent");
+                $enterPhoneLearnForm.hide();
+                $enterPhoneCodeLearnForm.show();
+            }, function() {
+                $phoneCodeAuthLearnResendLink.attr('disabled', false);
+                toastr.error("Please ensure you provided a valid phone number. If this issue persists please contact support", "Error sending code");
+            });
+        });
+
+        $("#other-logins-learn-link").click(function(e) {
+            var redirectPath = window.location.pathname;
+            if (window.location.hash.substr(25).length > 0) {
+                // have something after #!modalAuthenticateLearn=
+                redirectPath = decodeURIComponent(window.location.hash.substr(25));
+            }
+
+            window.location.href = '/learn-en/auth/email-input?redirect=' +
+                    encodeURIComponent(redirectPath);
+        });
+
+        $("#modal-authenticate-learn-close-button").click(function(e) {
+            window.location.href = '';
+        });
+
+        $enterPhoneCodeLearnForm.submit(function(e) {
+            e.preventDefault();
+            var $subBtn = $("#phone-code-learn-form-btn-submit");
+            $subBtn.addClass('is-loading');
+            $subBtn.attr('disabled', 'disabled');
+            verifyTextCode($phoneCodeLearnInput.val(), function(resp) {
+                $subBtn.removeClass('is-loading');
+                $subBtn.attr('disabled', false);
+                finishAuthAndReload();
+            }, function() {
+                $subBtn.removeClass('is-loading');
+                $subBtn.attr('disabled', false);
+                toastr.error("Please make sure your code is correct and was sent within the last 5-minutes. Please try again", "Code invalid");
+            });
+            return false;
+        });
+
+    });
+</script><!-- Mobile Extended Modal -->
+<div class="modal fade" id="modalMobileExtendedSidebarNav" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-card card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Title -->
+                            <h4 class="card-header-title">
+                                Extended Navigation
+                            </h4>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Close -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+
+                <div id="mobile-sidebar-extension" class="card-body navbar navbar-vertical fixed-left navbar-light">
+                    <div class="exl-sidebar-menu-content" style="width: 100%;">
+                        <!-- Course Sidebar -->
+                    
+                        <!-- Divider -->
+                        <hr class="my-3">
+                    
+                        <!-- Heading -->
+                        <h6 class="navbar-heading text-muted">
+                            Configuration
+                        </h6>
+                    
+                        <!-- Navigation -->
+                        <ul class="navbar-nav mb-md-3">
+                            <li class="nav-item">
+                                <div class="nav-link text-muted">
+                                    <i class="fe fe-sun"></i> Night mode
+                                    <div class="custom-control custom-checkbox-toggle ml-auto">
+                                        <input onclick="sidebarChangeTheme('light');" type="checkbox" class="custom-control-input" id="theme-mode-toggle" checked="true">
+                                        <label class="custom-control-label" for="theme-mode-toggle"></label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    
+                    </div> <!-- / .navbar-collapse -->                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- Modal: Callout looking for a job -->
+<div class="modal fade" id="modalAssignResource" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-card card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Title -->
+                            <h4 class="card-header-title">
+                                Assign to Class
+                            </h4>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Close -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+
+                <div class="card-body">
+                    <div>
+                        <form id="assign-to-class-form">
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <label>Assignment Title</label>
+                                    <input id="assign-resource-title" type="text" class="form-control" minlength="3" maxlength="120" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <label>Assignment Notes (Optional)</label>
+                                    <input id="assign-resource-headline" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <label>Due Date (Optional)</label>
+                                    <input id="assign-resource-due-date" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-12 mb-3">
+                                    <button type="submit" class="btn btn-primary w-100 text-center">Post Assignment</button>
+                                </div>
+                            </div>
+
+                        </form>
+                        <small class="text-secondary mt-2">
+                            Once you click post assignment, learners in the selected class will immediately be able to see and complete this assignment
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var _modalAssignResourceFPInstance = null;
+    var _modalAssignResourceAPI = {
+        data: null,
+        show: function() {
+            if (!_modalAssignResourceAPI.data) {
+                return
+            }
+            $('#assign-resource-title').attr('value', _modalAssignResourceAPI.data.resourceTitle);
+            $('#assign-resource-headline').attr('value', _modalAssignResourceAPI.data.resourceHeadline);
+            _modalAssignResourceFPInstance = $('#assign-resource-due-date').flatpickr({
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+                altInput: true,
+                altFormat: "F j, Y H:i",
+                defaultHour: 0,
+                minDate: new Date()
+            });
+            $('#modalAssignResource').modal('show');
+        }
+    };
+    $(function() {
+        $("#assign-to-class-form").submit(function(e) {
+            e.preventDefault();
+            var data = _modalAssignResourceAPI.data;
+            $.postJSON(classroomAPIBaseURL+'/v1/courses/' + data.courseId + '/resources/' + data.resourceId + '/assign', {
+                assignments: [
+                    {
+                        title: $('#assign-resource-title').val(),
+                        headline: $('#assign-resource-headline').val(),
+                        classId: data.classId,
+                        hasDueDate: _modalAssignResourceFPInstance.selectedDates.length !== 0,
+                        dueAt: _modalAssignResourceFPInstance.selectedDates.length !== 0 ? _modalAssignResourceFPInstance.selectedDates[0].toISOString() : undefined
+                    }
+                ]
+            }, function(resp) {
+                window.localStorage.setItem('toastOnLoad', JSON.stringify({intent: 'success', message: "Resource assigned"}));
+                window.location.reload();
+            }, function(err) {
+                toastClassroomAPIError(err);
+            });
+        });
+    });
+</script><style>
+    #exl-overlays-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 50px;
+        width: 100px;
+    }
+    .exl-overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999999;
+        background: rgba(255,255,255,0.90);
+    }
+    .exl-overlay-data {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        visibility: 0s 0.5s;
+        transition: opacity 0.5s, visibility 0s 0.5s;
+    }
+    .exl-overlay-open {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+    }
+    .exl-resource-overlay-header {
+        position: fixed;
+        background: white;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        height: 30px;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    #exl-resource-iframe {
+        border: none !important;
+        position: fixed;
+        top: 30px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: calc(100vh - 30px);
+        width: 100%;
+        background: #000;
+    }
+    #exl-loading-overlay {
+        border: none !important;
+        position: fixed;
+        top: 30px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: calc(100vh - 30px);
+        width: 100%;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #exl-loading-overlay.hide {
+        display: none;
+    }
+    #exl-resource-iframe.hide {
+        display: none;
+    }
+    #xLoader{
+        background: transparent;
+        position: static;
+        width: 200px;
+        height: 200px;
+    }
+    .exl-resource-overlay-header-row {
+        margin-top: 4px;
+        margin-left: 6px;
+    }
+</style>
+
+<div id="exl-overlays-container">
+    <div id="exl-resource-overlay" class="exl-overlay exl-overlay-data">
+        <div class="exl-resource-overlay-header">
+            <div class="row exl-resource-overlay-header-row">
+                <div class="col p-0" style="cursor: pointer;" onclick="window.location.reload()">
+                    <span class="fe fe-chevron-left"></span> Back to Classroom
+                </div>
+                <div class="col-auto">
+
+                </div>
+            </div>
+        </div>
+        <div id="exl-loading-overlay">
+            <div id="xLoader"><div class="google-spin-wrapper"><div class="google-spin"></div></div></div>
+        </div>
+        <iframe id="exl-resource-iframe" class="hide" allow="camera *; microphone *;" src=""></iframe>
+    </div>
+</div>
+
+<script>
+    function showResourceIFrame(srcUrl) {
+        var iframe = document.getElementById('exl-resource-iframe');
+        iframe.setAttribute('src', srcUrl);
+        drift.on('ready',function(api, payload) {
+            api.widget.hide();
+        });
+        document.getElementById('exl-resource-overlay').classList += ' exl-overlay-open';
+        checkIframeLoaded();
+    }
+    function checkIframeLoaded() {
+        // Get a handle to the iframe element
+        var iframe  = document.getElementById('exl-resource-iframe');
+        var overlayLoader = document.getElementById('exl-loading-overlay').classList = "hide";
+        var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+        // Check if loading is complete
+        if (  iframeDoc.readyState  == 'complete' ) {
+            iframe.classList = "";
+            return;
+        } 
+
+        // If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
+        window.setTimeout(checkIframeLoaded, 100);
+    }
+    window.addEventListener('message', function(e) {
+        if (e.data === "exl.resource.finished" || e.message === "exl.resource.finished") {
+            window.localStorage.setItem('toastOnLoad', JSON.stringify({intent: 'success', message: 'Activity Completed'}));
+            window.location.reload();
+        } else if (e.data === "exl.resource.saved_progress" || e.message === "exl.resource.saved_progress") {
+            window.localStorage.setItem('toastOnLoad', JSON.stringify({intent: 'success', message: 'Progress Saved'}));
+            window.location.reload();
+        } else if (e.data === "exl.resource.saved_config" || e.message === "exl.resource.saved_config") {
+            window.localStorage.setItem('toastOnLoad', JSON.stringify({intent: 'success', message: 'Configuration Saved'}));
+            window.location.reload();
+        }
+    });
+</script><!--<style>
+    #callout-top {
+        display: none;
+    }
+    .co-show #callout-top {
+        display: inherit;
+        height: 60px;
+        width: 100%;
+        z-index: 1045;
+        padding: 10px 0px;
+        background-color: inherit;
+        position: fixed;
+        top: 0;
+    }
+    .co-show #main-page-wrapper {
+        margin-top: 60px;
+    }
+    .co-show #sidebar {
+        margin-top: 60px;
+    }
+    .co-show #callout-top .co-inner {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .co-show #callout-top .co-inner .co-heading {
+        margin: inherit;
+        margin-right: 20px;
+        font-size: 20px;
+        line-height: 1.8;
+    }
+    .co-show #callout-top .co-btn-grp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 820px) {
+        .co-show #callout-top {
+            height: 118px;
+        }
+        .co-show #sidebar {
+            margin-top: 118px;
+        }
+        .co-show #main-page-wrapper {
+            margin-top: 118px;
+        }
+        .co-show #callout-top .co-inner {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 0 10px;
+        }
+        .co-show #callout-top .co-inner .co-heading {
+            margin-right: 0;
+        }
+        .co-show #callout-top .co-btn-grp {
+            display: flex;
+            width: 100%;
+        }
+        .co-show #callout-top .co-btn-grp button {
+            white-space: normal;
+            width: 50%;
+            font-size: 18px;
+            height: 54px !important;
+        }
+    }
+
+    @media (max-width: 660px) {
+        .co-show #callout-top .co-btn-grp button {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .co-show #callout-top .co-btn-grp button {
+            font-size: 12px;
+        }
+    }
+</style>
+<script>
+    if (!window.localStorage.techJobCalloutTopAction || window.localStorage.techJobCalloutTopAction === '') {
+        document.getElementById('page-body').className += " co-show";
+    }
+</script>
+<div id="callout-top">
+    <div class="co-inner">
+        <div class="co-heading text-danger">
+            <span class="fe fe-alert-triangle"></span> Do You Want a Tech Job?
+        </div>
+        <div class="co-btn-grp">
+            <button type="button" data-toggle="modal" data-target="#modalCalloutLookingForJob" class="btn btn-outline-primary mr-2">
+                YES, I WANT A TECH JOB
+            </button>
+            <button type="button" data-toggle="modal" data-target="#modalCalloutLookingForRaise" class="btn btn-outline-primary">
+                NO, I ALREADY HAVE A TECH JOB
+            </button>
+        </div>
+    </div>
+</div>-->
+<!--<style>-->
+    <!--.co-show #callout-top {-->
+        <!--background-color: white;-->
+    <!--}-->
+<!--</style>-->
+<div id="topbar-wrapper">
+    <nav id="topbar" class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+    
+            <!-- Brand -->
+            <a class="navbar-brand mr-auto spf-link d-lg-none" href="/learn-en/dashboard">
+                <img src="https://cdn-static-assets.exlskills.com/img/logo-exlskills.svg" alt="EXLskills"
+                    class="navbar-brand-img">
+            </a>
+    
+            <style>
+                #navbar .navbar-nav .nav-item .nav-link {
+                    font-size: 16px;
+                }
+    
+                @media (max-width: 991px) {
+                    .topbar-coins-manager {
+                        display: none !important;
+                    }
+                }
+    
+                .topbar-coins-manager {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    min-width: 0;
+                    word-wrap: break-word;
+                    border-radius: 15px;
+                    background-clip: border-box;
+                    margin-right: 24px;
+                    margin-left: 24px;
+                }
+    
+                .topbar-coins-manager input {
+                    border: none;
+                }
+    
+                .topbar-coins-manager input {
+                    background-color: rgb(235, 240, 245) !important;
+                    color: #12263f !important;
+                    cursor: pointer;
+                    margin-right: -20px;
+                    width: 100px !important;
+                    font-weight: 500 !important;
+                }
+    
+                .topbar-coins-manager .input-group-text {
+                    background-color: rgb(226, 15, 109) !important;
+                    color: white;
+                    cursor: pointer;
+                    border-radius: 50% !important;
+                    width: 40px;
+                    z-index: 2;
+                    padding-left: 12px !important;
+                }
+    
+                .exl-ns-dropdown {
+                    margin-right: 6px;
+                }
+            </style>
+    
+    
+            <!-- User (xs) -->
+            <div class="navbar-user">
+                <div class="dropdown exl-ns-dropdown">
+                    <!-- Toggle -->
+                    <a href="#" class="text-muted" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <div id="topbar-ns-bell-wrapper" class="icon" style="margin-top: 10px;margin-right: 5px;">
+                            <i class="fe fe-bell" style="font-size: 20px;"></i>
+                        </div>
+                    </a>
+    
+                    <!-- Menu -->
+                    <div class="exl-ns-dropdown-menu dropdown-menu dropdown-menu-right dropdown-menu-card">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col">
+    
+                                    <!-- Title -->
+                                    <h5 class="card-header-title">
+                                        Notifications
+                                    </h5>
+    
+                                </div>
+                                <div class="col-auto">
+    
+                                    <!--&lt;!&ndash; Link &ndash;&gt;-->
+                                    <!--<a href="#!" class="small">-->
+                                    <!--View All-->
+                                    <!--</a>-->
+    
+                                    <!-- Close -->
+                                    <button type="button" class="close d-block d-md-none ml-4">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+    
+                                </div>
+                            </div> <!-- / .row -->
+                        </div> <!-- / .card-header -->
+                        <div class="card-body">
+    
+                            <!-- List group -->
+                            <div id="topbar-ns-list-group" class="list-group list-group-flush my-n3">
+                                <!-- Notifications will be inserted here -->
+                            </div>
+    
+                        </div>
+                    </div> <!-- / .dropdown-menu -->
+    
+                </div>
+                <!-- Dropdown -->
+                <div class="dropdown">
+    
+                    <!-- Toggle -->
+                    <a href="#!" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <div class="avatar avatar-sm avatar-online">
+                            <div class="avatar-img">
+                                <div class="exl-avatar" exl-avatar-value="Kurvin Hendricks"></div>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <!-- Menu -->
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sidebarIcon">
+                        <a href="/learn-en/settings/profile"
+                            class="dropdown-item">Profile</a>
+                        <a href="/learn-en/settings/billing"
+                            class="dropdown-item">Billing</a>
+                        <a href="#!" class="dropdown-item user-logout-btn">Logout</a>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div href="#!modalManageCoins" class="topbar-coins-manager">
+                <div class="row text-center align-items-center">
+                    <div class="input-group input-group-rounded input-group-merge">
+                        <!-- Input -->
+                        <input type="search" class="form-control form-control-appended search" value="💰 0"
+                            aria-label="💰 0">
+                        <div class="input-group-append">
+                            <div class="input-group-text align-items-center text-center align-items-baseline">
+                                <div>
+                                    <span class="fe fe-box"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Toggler -->
+            <button style="margin-left: 10px;" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Collapse -->
+            <div id="navbar" class="collapse navbar-collapse mr-auto order-lg-first">
+                <!-- Navigation -->
+                <ul class="navbar-nav mr-auto">
+                    <a style="display: none;width: 160px;" class="navbar-brand m-auto d-lg-block" href="/">
+                        <img style="padding-right: 18px;margin-top: -2px;max-height: none;"
+                            src="https://cdn-static-assets.exlskills.com/img/logo-exlskills.svg" alt="EXLskills">
+                    </a>
+                    <li class="nav-item">
+                        <a class="nav-link spf-link "
+                            href="/learn-en/dashboard">
+                            <i class="fe fe-home"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link spf-link "
+                            href="/learn-en/classroom">
+                            <i class="fe fe-rss"></i> Classroom
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link spf-link "
+                            href="/learn-en/talent/interviews">
+                            <i class="fe fe-code"></i> Interviews
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link spf-link "
+                            href="/learn-en/courses">
+                            <i class="fe fe-layers"></i> Solo Courses
+                        </a>
+                    </li>
+                    <!--<li class="nav-item">-->
+                    <!--<a class="nav-link spf-link " href="/learn-en/digital-diplomas">-->
+                    <!--<i class="fe fe-star"></i> Digital Diplomas-->
+                    <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-item">-->
+                    <!--<a class="nav-link spf-link " href="/learn-en/projects">-->
+                    <!--<i class="fe fe-package"></i> Guided Projects-->
+                    <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-item">-->
+                    <!--<a class="nav-link spf-link " href="/learn-en/instructors">-->
+                    <!--<i class="fe fe-users"></i> Live Instructors-->
+                    <!--</a>-->
+                    <!--</li>-->
+                    <li class="nav-item d-lg-none">
+                        <a onclick="$('#navbar').removeClass('show');" class="nav-link" href="#!modalManageCoins">
+                            <span class="fe fe-box"></span> $0 Coins
+                        </a>
+                    </li>
+                </ul>
+    
+            </div>
+    
+        </div> <!-- / .container -->
+    </nav>
+    
+    <script>
+        $(function () {
+            $('.topbar-coins-manager input').focus(function (e) {
+                $(this).blur();
+            });
+            $('.topbar-coins-manager').click(function (e) {
+                window.location.hash = '#!modalManageCoins=true';
+            })
+        });
+    </script></div>
+<!-- if on course, then show sidebar, otherwise no -->
+        <div id="main-page-wrapper" class="exl-hide-sidebar main-page-wrapper-scrollable">
+    <nav id="sidebar" class="navbar navbar-vertical fixed-left navbar-expand-lg navbar-light">
+        <div id="sidebar-menu-content-wrapper" class="container-fluid">
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse">
+                <div class="exl-sidebar-menu-content" style="width: 100%;">
+                    <!-- Course Sidebar -->
+                
+                    <!-- Divider -->
+                    <hr class="my-3">
+                
+                    <!-- Heading -->
+                    <h6 class="navbar-heading text-muted">
+                        Configuration
+                    </h6>
+                
+                    <!-- Navigation -->
+                    <ul class="navbar-nav mb-md-3">
+                        <li class="nav-item">
+                            <div class="nav-link text-muted">
+                                <i class="fe fe-sun"></i> Night mode
+                                <div class="custom-control custom-checkbox-toggle ml-auto">
+                                    <input onclick="sidebarChangeTheme('light');" type="checkbox" class="custom-control-input" id="theme-mode-toggle" checked="true">
+                                    <label class="custom-control-label" for="theme-mode-toggle"></label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                
+                </div> <!-- / .navbar-collapse -->    </div>
+        </div> <!-- / .container-fluid -->    </nav>
+    <div class="main-content">
+        <div id="content">
+            <div class="exl-require-verified-auth"></div>
+
+<div>
+        <style>
+            #code-firepad-container {
+                width: 100%;
+                height: calc(100% - 42px);
+            }
+            #notes-firepad-container {
+                width: 100%;
+                height: 100%;
+            }
+            a.powered-by-firepad {
+                display: none;
+            }
+            .CodeMirror {
+                font-size: 14px;
+            }
+            .CodeMirror-scroll {
+                height: 100%;
+                overflow-y: hidden;
+                overflow-x: auto;
+            }
+        
+            /* horizontal panel*/
+        
+            .vh-adjusted-container {
+                height: calc(100vh - 69px);
+                max-height: calc(100vh - 69px);
+            }
+        
+            @media (max-width: 992px) {
+                .vh-adjusted-container {
+                    height: calc(100vh - 65px);
+                    max-height: calc(100vh - 65px);
+                }
+            }
+        
+            .panel-container {
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+        
+                /* avoid browser level touch actions */
+                xtouch-action: none;
+            }
+        
+            .panel-left {
+                flex: 0 0 auto;
+                /* only manually resize */
+                width: 50vw;
+                min-height: 200px;
+                min-width: 25vw;
+                white-space: nowrap;
+                background: rgb(43, 43, 43);
+                color: white;
+            }
+        
+            .splitter {
+                flex: 0 0 auto;
+                width: 6px;
+                background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
+                min-height: 200px;
+                cursor: col-resize;
+                z-index: 9;
+            }
+        
+            .panel-right {
+                flex: 1 1 auto;
+                /* resizable */
+                width: 300px;
+                min-height: 200px;
+                min-width: 200px;
+                background: rgb(43, 43, 43);
+            }
+        
+            .panel-container-vertical {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+        
+            .panel-top {
+                flex: 0 0 auto;
+                /* only manually resize */
+                height: 350px;
+                width: 100%;
+                white-space: nowrap;
+                background: rgb(43, 43, 43);
+                color: white;
+            }
+        
+            .splitter-horizontal {
+                flex: 0 0 auto;
+                height: 6px;
+                background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/hsizegrip.png) center center no-repeat #535353;
+                cursor: row-resize;
+                z-index: 9;
+            }
+        
+            .panel-bottom {
+                flex: 1 1 auto;
+                /* resizable */
+                min-height: 200px;
+                background: #eee;
+            }
+        
+            .left-top-panel-gutter {
+                background: #313335;
+                border-right: 1px solid #313335;
+                margin-top: -8px;
+                height: 48px;
+                width: 38px;
+            }
+        
+            #pseudo-terminal {
+                font-family: monospace;
+                color: white;
+                background: rgb(43, 43, 43);
+                height: 100%;
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                white-space: pre;
+                white-space: pre-line;
+                overflow-y: scroll;
+                padding-bottom: 70px;
+            }
+        
+            .tal-left-panel-row {
+                height: 42px;
+                padding-top: 7px;
+                padding-right: 4px;
+                padding-left: 4px;
+                background: rgb(43, 43, 43);
+            }
+        
+            #tal-join-conference-btn {
+                margin-left: 13px;
+                margin-top: 13px;
+            }
+        
+            #tal-jitsi-wrapper {
+                height: 100%;
+            }
+        
+            .firepad-userlist {
+                display: flex;
+                padding-top: 5px;
+                padding-left: 5px;
+            }
+        
+            .firepad-userlist-user {
+                display: flex;
+            }
+        
+            .firepad-userlist-color-indicator {
+                height: 10px;
+                width: 10px;
+                margin: 5px;
+            }
+        
+            .firepad-userlist-users {
+                display: flex;
+            }
+        
+            ul.custom-tabs {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+            }
+            ul.custom-tabs li{
+                background: none;
+                display: inline-block;
+                padding: 10px 15px;
+                cursor: pointer;
+            }
+        
+            ul.custom-tabs li.current{
+                background: rgba(53, 53, 53, 1);
+            }
+        
+            .custom-tab-content{
+                display: none;
+                background: rgba(53, 53, 53, 1);
+                height: calc(100% - 73px);
+                overflow: hidden;
+            }
+        
+            .custom-tab-content.current{
+                display: inherit;
+            }
+        
+            .help-text-container {
+                height: 100%;
+                width: 100%;
+                padding: 10px;
+                white-space: pre;
+                white-space: pre-line;
+                overflow-y: auto;
+            }
+        
+            .interview-status-tabs-bar {
+                overflow-x: auto;
+            }
+        
+            .interview-status-tabs-bar::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                background-color: rgb(43, 43, 43);
+            }
+        
+            .interview-status-tabs-bar::-webkit-scrollbar {
+                width: 4px;
+                background-color: rgb(43, 43, 43);
+            }
+        
+            .interview-status-tabs-bar::-webkit-scrollbar-thumb {
+                background-color: rgba(53, 53, 53, 1);
+                border: 2px solid #555555;
+            }
+        
+        </style>
+        
+        <div>
+            <div class="vh-adjusted-container panel-container">
+        
+                <div class="vh-adjusted-container panel-left">
+                    <div class="row tal-left-panel-row">
+                        <div>
+                            <div class="left-top-panel-gutter"></div>
+                        </div>
+                        <div class="col" style="padding-left: 4px;">
+                            <button id="tal-exec-code-btn" class="btn btn-sm btn-primary">Run <i class="fe fe-play"></i></button>
+                        </div>
+        
+        
+                        <div class="col-auto">
+                            <select id="tal-update-programming-language" style="min-width: 120px;" class="form-control form-control-sm">
+                                    <option value="bash" >Bash</option>
+                                    <option value="c#" >C#</option>
+                                    <option value="c++" >C++</option>
+                                    <option value="clojure" >Clojure</option>
+                                    <option value="golang" >Golang</option>
+                                    <option value="haskell" >Haskell</option>
+                                    <option value="java" >Java</option>
+                                    <option value="javascript" >Javascript</option>
+                                    <option value="kotlin" >Kotlin</option>
+                                    <option value="perl" >Perl</option>
+                                    <option value="php" selected>Php</option>
+                                    <option value="python2" >Python2</option>
+                                    <option value="python3" >Python3</option>
+                                    <option value="ruby" >Ruby</option>
+                                    <option value="swift" >Swift</option>
+                                    <option value="typescript" >Typescript</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="code-firepad-container"></div>
+                </div>
+        
+                <div class="splitter">
+                </div>
+        
+                <div class="vh-adjusted-container panel-right">
+                    <div class="vh-adjusted-container panel-container-vertical">
+        
+                        <div class="vh-adjusted-container panel-top">
+                            <div class="interview-status-tabs-bar">
+                                <div id="pad-userlist" style="height: 32px;"></div>
+                                <ul class="custom-tabs">
+                                    <li class="custom-tab-link current" data-tab="tab-video-conference"><span class="fe fe-phone-call"></span> Audio/Video</li>
+                                        <li class="custom-tab-link" data-tab="tab-members"><span class="fe fe-users"></span> Members</li>
+                                    <li class="custom-tab-link" data-tab="tab-help-support"><span class="fe fe-help-circle"></span> Help</li>
+                                </ul>
+                            </div>
+        
+                            <div id="tab-video-conference" class="custom-tab-content current">
+                                <div id="tal-conf-btn-grp" class="btn-group">
+                                    <button id="tal-join-conference-btn" type="button" class="btn btn-primary"><span class="fe fe-video"></span> + <span class="fe fe-mic"></span> Join Live Call</button>
+                                    <button type="button" style="margin-top: 13px;" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Join Live Call</span>
+                                    </button>
+                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(70px, 41px, 0px);">
+                                        <a id="tal-join-conference-sans-video-btn" class="dropdown-item" href="#"><span class="fe fe-video-off"></span> Join with Video Off</a>
+                                        <a class="dropdown-item" href="https://meet.jit.si/static/dialInInfo.html?room=exlskillsInterview_RmcBDFc4bUfry3KODVW85bVC7jomZBnek7nn1oMC4RTxueImMGKWr6HDMXuVzQVIJNMyVL9yW5wav1xRxqhiiegtyorcxlJ8xXDUaZSna4utMqORXX1VsaXOUfi4ZG2U5Ff0obi8WAccKU84RdEJ3McFRO19r6CNvOKX9KiPJqZqIMovSjSAS5lIgyb0zL8Xle2IgxZsWxqC3qTOjgY5GuZeVtZ7Os7VhngWEcZEPXzTIkl5WiuYVpjFNBQaVsG0" target="_blank" rel="noopener"><span class="fe fe-phone-call"></span> Get Dial-in Numbers</a>
+                                    </div>
+                                </div>
+                                <div id="tal-jitsi-wrapper"></div>
+                            </div>
+                            <div id="tab-members" class="custom-tab-content">
+                                <div style="overflow-y: scroll;height: 100%;">
+                                    <div style="padding: 10px;">
+                                        <h4>Candidates</h4>
+                                        <ul class="text-secondary">
+                                                <li>
+                                                    Kurvin Hendricks
+                                                </li>
+                                        </ul>
+                                
+                                
+                                        <h4>Admins</h4>
+                                        <ul class="text-secondary">
+                                                <li>
+                                                    Serge
+                                                </li>
+                                        </ul>
+                                
+                                    </div>
+                                </div>                    </div>
+                            <div id="tab-help-support" class="custom-tab-content">
+                                <div class="help-text-container">Need help or have questions? <a href="#" class="drift-open-chat">Click here</a> to get in touch with our support team.</div>
+                            </div>
+                        </div>
+        
+                        <div class="splitter-horizontal"></div>
+        
+                        <div class="vh-adjusted-container panel-bottom">
+                            <div id="pseudo-terminal">
+                                <div style="color: cyan;">Welcome to the EXLskills Live Coding Interview pseudo-terminal! Whenever you or your interviewer run code or change the coding language, you will all see the corresponding outputs here in real time. To run code, click the Run button in the top left corner and watch for the output here!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+        
+        <!-- CodeMirror and its mode/addon files -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/codemirror.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.46.0/addon/mode/loadmode.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.46.0/mode/meta.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/comment/comment.min.js"></script>
+        
+        <!-- CodeMirror Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/codemirror.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/theme/darcula.min.css" />
+        
+        <!-- Firepad -->
+        <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.5.3/firepad.css" />
+        <script src="https://cdn.firebase.com/libs/firepad/1.5.3/firepad.js"></script>
+        
+        <!-- Resize panels -->
+        <script src="https://cdn-static-assets.exlskills.com/libs/jquery-resizable/dist/jquery-resizable.min.js"></script>
+        
+        <!-- Jitsi Meet -->
+        <script src='https://meet.jit.si/external_api.js'></script>
+        
+        <script>
+            var FirepadUserList = (function() {
+                function FirepadUserList(ref, place, userId, displayName) {
+                    if (!(this instanceof FirepadUserList)) {
+                        return new FirepadUserList(ref, place, userId, displayName);
+                    }
+        
+                    this.ref_ = ref;
+                    this.userId_ = userId;
+                    this.userColor_ = "#ffb";
+                    this.place_ = place;
+                    this.firebaseCallbacks_ = [];
+        
+                    var self = this;
+                    this.hasName_ = !!displayName;
+                    this.displayName_ = displayName || 'Guest ' + Math.floor(Math.random() * 1000);
+                    this.firebaseOn_(ref.root.child('.info/connected'), 'value', function(s) {
+                        if (s.val() === true && self.displayName_) {
+                            var nameRef = ref.child(self.userId_).child('name');
+                            nameRef.onDisconnect().remove();
+                            nameRef.set(self.displayName_);
+                        }
+                    });
+        
+                    this.userList_ = this.makeUserList_();
+                    place.appendChild(this.userList_);
+                }
+        
+                // This is the primary "constructor" for symmetry with Firepad.
+                FirepadUserList.fromDiv = FirepadUserList;
+        
+                FirepadUserList.prototype.dispose = function() {
+                    this.removeFirebaseCallbacks_();
+                    this.ref_.child(this.userId_).child('name').remove();
+        
+                    this.place_.removeChild(this.userList_);
+                };
+        
+                FirepadUserList.prototype.makeUserList_ = function() {
+                    return elt('div', [
+                        this.makeHeading_(),
+                        elt('div', [
+                            this.makeUserEntryForSelf_(),
+                            this.makeUserEntriesForOthers_()
+                        ], {'class': 'firepad-userlist-users' })
+                    ], {'class': 'firepad-userlist' });
+                };
+        
+                FirepadUserList.prototype.makeHeading_ = function() {
+                    var counterSpan = elt('span', '0');
+                    this.firebaseOn_(this.ref_, 'value', function(usersSnapshot) {
+                        setTextContent(counterSpan, "" + usersSnapshot.numChildren());
+                    });
+        
+                    return elt('div', [
+                        elt('span', 'Online ('),
+                        counterSpan,
+                        elt('span', ')')
+                    ], { 'class': 'firepad-userlist-heading' });
+                };
+        
+                FirepadUserList.prototype.getCurrentUserColor = function() {
+                    return this.userColor_;
+                };
+        
+                FirepadUserList.prototype.makeUserEntryForSelf_ = function() {
+                    var myUserRef = this.ref_.child(this.userId_);
+        
+                    var _self = this;
+                    var colorDiv = elt('div', null, { 'class': 'firepad-userlist-color-indicator' });
+                    this.firebaseOn_(myUserRef.child('color'), 'value', function(colorSnapshot) {
+                        var color = colorSnapshot.val();
+                        if (isValidColor(color)) {
+                            colorDiv.style.backgroundColor = color;
+                            _self.userColor_ = color;
+                        }
+                    });
+        
+                    var nameDiv = elt('div', this.displayName_, { 'class': 'firepad-userlist-name' });
+        
+                    return elt('div', [ colorDiv, nameDiv ], {
+                        'class': 'firepad-userlist-user ' + 'firepad-user-' + this.userId_
+                    });
+                };
+        
+                FirepadUserList.prototype.makeUserEntriesForOthers_ = function() {
+                    var self = this;
+                    var userList = elt('div');
+                    var userId2Element = { };
+        
+                    function updateChild(userSnapshot, prevChildName) {
+                        var userId = userSnapshot.key;
+                        var div = userId2Element[userId];
+                        if (div) {
+                            userList.removeChild(div);
+                            delete userId2Element[userId];
+                        }
+                        var name = userSnapshot.child('name').val();
+                        if (typeof name !== 'string') { name = 'Guest'; }
+                        name = name.substring(0, 20);
+        
+                        var color = userSnapshot.child('color').val();
+                        if (!isValidColor(color)) {
+                            color = "#ffb"
+                        }
+        
+                        var colorDiv = elt('div', null, { 'class': 'firepad-userlist-color-indicator' });
+                        colorDiv.style.backgroundColor = color;
+        
+                        var nameDiv = elt('div', name || 'Guest', { 'class': 'firepad-userlist-name' });
+        
+                        var userDiv = elt('div', [ colorDiv, nameDiv ], {
+                            'class': 'firepad-userlist-user ' + 'firepad-user-' + userId
+                        });
+                        userId2Element[userId] = userDiv;
+        
+                        if (userId === self.userId_) {
+                            // HACK: We go ahead and insert ourself in the DOM, so we can easily order other users against it.
+                            // But don't show it.
+                            userDiv.style.display = 'none';
+                        }
+        
+                        var nextElement =  prevChildName ? userId2Element[prevChildName].nextSibling : userList.firstChild;
+                        userList.insertBefore(userDiv, nextElement);
+                    }
+        
+                    this.firebaseOn_(this.ref_, 'child_added', updateChild);
+                    this.firebaseOn_(this.ref_, 'child_changed', updateChild);
+                    this.firebaseOn_(this.ref_, 'child_moved', updateChild);
+                    this.firebaseOn_(this.ref_, 'child_removed', function(removedSnapshot) {
+                        var userId = removedSnapshot.key;
+                        var div = userId2Element[userId];
+                        if (div) {
+                            userList.removeChild(div);
+                            delete userId2Element[userId];
+                        }
+                    });
+        
+                    return userList;
+                };
+        
+                FirepadUserList.prototype.firebaseOn_ = function(ref, eventType, callback, context) {
+                    this.firebaseCallbacks_.push({ref: ref, eventType: eventType, callback: callback, context: context });
+                    ref.on(eventType, callback, context);
+                    return callback;
+                };
+        
+                FirepadUserList.prototype.firebaseOff_ = function(ref, eventType, callback, context) {
+                    ref.off(eventType, callback, context);
+                    for(var i = 0; i < this.firebaseCallbacks_.length; i++) {
+                        var l = this.firebaseCallbacks_[i];
+                        if (l.ref === ref && l.eventType === eventType && l.callback === callback && l.context === context) {
+                            this.firebaseCallbacks_.splice(i, 1);
+                            break;
+                        }
+                    }
+                };
+        
+                FirepadUserList.prototype.removeFirebaseCallbacks_ = function() {
+                    for(var i = 0; i < this.firebaseCallbacks_.length; i++) {
+                        var l = this.firebaseCallbacks_[i];
+                        l.ref.off(l.eventType, l.callback, l.context);
+                    }
+                    this.firebaseCallbacks_ = [];
+                };
+        
+                /** Assorted helpers */
+        
+                function isValidColor(color) {
+                    return typeof color === 'string' &&
+                            (color.match(/^#[a-fA-F0-9]{3,6}$/) || color == 'transparent');
+                }
+        
+        
+                /** DOM helpers */
+                function elt(tag, content, attrs) {
+                    var e = document.createElement(tag);
+                    if (typeof content === "string") {
+                        setTextContent(e, content);
+                    } else if (content) {
+                        for (var i = 0; i < content.length; ++i) { e.appendChild(content[i]); }
+                    }
+                    for(var attr in (attrs || { })) {
+                        e.setAttribute(attr, attrs[attr]);
+                    }
+                    return e;
+                }
+        
+                function setTextContent(e, str) {
+                    e.innerHTML = "";
+                    e.appendChild(document.createTextNode(str));
+                }
+        
+                function on(emitter, type, f) {
+                    if (emitter.addEventListener) {
+                        emitter.addEventListener(type, f, false);
+                    } else if (emitter.attachEvent) {
+                        emitter.attachEvent("on" + type, f);
+                    }
+                }
+        
+                function off(emitter, type, f) {
+                    if (emitter.removeEventListener) {
+                        emitter.removeEventListener(type, f, false);
+                    } else if (emitter.detachEvent) {
+                        emitter.detachEvent("on" + type, f);
+                    }
+                }
+        
+                function preventDefault(e) {
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+                }
+        
+                function stopPropagation(e) {
+                    if (e.stopPropagation) {
+                        e.stopPropagation();
+                    } else {
+                        e.cancelBubble = true;
+                    }
+                }
+        
+                function stopEvent(e) {
+                    preventDefault(e);
+                    stopPropagation(e);
+                }
+        
+                return FirepadUserList;
+            })();
+        </script>
+        
+        <script>
+            $(function() {
+                var languages = {"bash":{"boilerplate":"echo 'Hello world!'","commentPrefix":"#","codeMirrorMode":"shell"},"c#":{"boilerplate":"\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\n\nnamespace ConsoleApp1\n{\n    class Program\n    {\n    static void Main(string[] args)\n    {\n        Console.WriteLine(\"Hello, world!\");\n        Console.ReadLine();\n    }\n    }\n}","commentPrefix":"//","codeMirrorMode":"text/x-csharp"},"c++":{"boilerplate":"#include <iostream>\n\nint main() \n{\n    std::cout << \"Hello, World!\";\n    return 0;\n}","commentPrefix":"//","codeMirrorMode":"text/x-c++src"},"clojure":{"boilerplate":"(println \"Hello World\")","commentPrefix":";","codeMirrorMode":"clojure"},"golang":{"boilerplate":"package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello world\")\n}","commentPrefix":"//","codeMirrorMode":"go"},"haskell":{"boilerplate":"main = putStrLn \"Hello, world!\"\n","commentPrefix":"--","codeMirrorMode":"text/x-haskell"},"java":{"boilerplate":"public class Main {\n\n    public static void main(String[] args) {\n        // Prints \"Hello, World\" to the terminal window.\n        System.out.println(\"Hello, World\");\n    }\n\n}","commentPrefix":"//","codeMirrorMode":"text/x-java"},"javascript":{"boilerplate":"// Enjoy JavaScript with ES6 features :)\n\nconst getHelloWorldStr = () => \"Hello, world!\"\n\nconsole.log(getHelloWorldStr());\n","commentPrefix":"//","codeMirrorMode":"javascript"},"kotlin":{"boilerplate":"fun main(args: Array<String>) {\n    println(\"Hello World!\")\n}","commentPrefix":"//","codeMirrorMode":"clike"},"perl":{"boilerplate":"# Strict and warnings are recommended.\nuse strict;\nuse warnings;\n \n# Print a message.\nprint \"Hello, World!\\n\";\n","commentPrefix":"#","codeMirrorMode":"perl"},"php":{"boilerplate":"<?php\n  echo \"Hello, World\\n\";\n?>","commentPrefix":"","codeMirrorMode":"text/x-php"},"python2":{"boilerplate":"print(\"Hello, world! This is Python 2!\")","commentPrefix":"#","codeMirrorMode":"python"},"python3":{"boilerplate":"print(\"Hello, world! This is Python 3!\")","commentPrefix":"#","codeMirrorMode":"python"},"ruby":{"boilerplate":"puts 'Hello, world!'\n","commentPrefix":"#","codeMirrorMode":"ruby"},"swift":{"boilerplate":"import Swift\nprint(\"Hello, world!\")","commentPrefix":"//","codeMirrorMode":"text/x-swift"},"typescript":{"boilerplate":"// Enjoy TypeScript :)\n\nvar helloWorld: string = \"Hello, world!\"; \n\nconsole.log(helloWorld); \n","commentPrefix":"//","codeMirrorMode":"javascript"}};
+                var codeFirepadId = "NG8GOn5OU2eVAA0XUNFDrOxB3BoAaXjpaX8CRamriRh3LLv9f5U73WH2PmH0ZMwx63lOILpI8LLvEHmdqj9gZMwZvGbgjETWKEJT7a7FBYmuIp2Bp22lpiLmGb1iBSl0ivb49wCuZ09KYuLUr34zddjYss7pCi7UTetvdfHcGIYRelombuVLIo3K9Z7MjZOXIz4wAekX3aFoxdxmTFwzFBIcmDTV35uwv8dwPm4QyiQnz67ftE9nLtfMwT9Dvv1S";
+                var conferenceId = "RmcBDFc4bUfry3KODVW85bVC7jomZBnek7nn1oMC4RTxueImMGKWr6HDMXuVzQVIJNMyVL9yW5wav1xRxqhiiegtyorcxlJ8xXDUaZSna4utMqORXX1VsaXOUfi4ZG2U5Ff0obi8WAccKU84RdEJ3McFRO19r6CNvOKX9KiPJqZqIMovSjSAS5lIgyb0zL8Xle2IgxZsWxqC3qTOjgY5GuZeVtZ7Os7VhngWEcZEPXzTIkl5WiuYVpjFNBQaVsG0";
+                var currCodeLanguage = 'php';
+                var isMac = CodeMirror.keyMap.default === CodeMirror.keyMap.macDefault;
+                var $execCodeBtn = $("#tal-exec-code-btn");
+                var $joinConfBtn = $("#tal-join-conference-btn");
+                var $joinConfSansVideoBtn = $("#tal-join-conference-sans-video-btn");
+                var $joinConfBtnGrp = $("#tal-conf-btn-grp");
+                var $pseudoTerminal = $("#pseudo-terminal");
+                var $langSelector = $("#tal-update-programming-language");
+                var loadedPseudoTermRecords = {};
+        
+                $(".panel-left").resizable({
+                    handleSelector: ".splitter",
+                    resizeHeight: false
+                });
+                $(".panel-top").resizable({
+                    handleSelector: ".splitter-horizontal",
+                    resizeWidth: false
+                });
+        
+                // Initialize Firebase.
+                var config = {
+                    apiKey: "AIzaSyBq-IqDlbGi7y62sQ1K_jMcFE_Zy494FZo",
+                    authDomain: "exlskills-talent-app.firebaseapp.com",
+                    databaseURL: "https://exlskills-talent-app.firebaseio.com",
+                    projectId: "exlskills-talent-app",
+                    storageBucket: "exlskills-talent-app.appspot.com",
+                    messagingSenderId: "937053757210" // TODO set to var after debugging complete
+                };
+        
+                firebase.initializeApp(config);
+        
+                // OPTIONAL: Turn on firebase database logging, but this usually isn't too helpful since it's internal msgs (hard to read and make sense of)
+                // firebase.database.enableLogging(true);
+        
+                // Get Firebase Database reference.
+                var codeFirepadRef = firebase.database().ref().child("pads").child(codeFirepadId);
+                var pseudoTermRef = firebase.database().ref().child("pads").child(codeFirepadId).child('pseudoTermHistory');
+        
+                pseudoTermRef.on('value', function(snapshot) {
+                    snapshot.forEach(function(record) {
+                        if (loadedPseudoTermRecords[record.key]) {
+                            console.log("Pseudo term record already exists. Skipping id: " + record.key, record.val());
+                            return;
+                        }
+                        var value = record.val();
+                        loadedPseudoTermRecords[record.key] = value;
+                        switch (value.event) {
+                            case "userStartedExecution":
+                                writeUserStartedExecToTerm(value.payload);
+                                break;
+                            case "userChangedLanguage":
+                                writeUserChangedLangToCMAndTermAndSelector(value.payload);
+                                break;
+                            case "userJoinedCall":
+                                writeUserJoinedCallToTerm(value.payload);
+                                break;
+                            case "execAPIResponse":
+                                writeExecOutputToTerm(value.payload);
+                                break;
+                            default:
+                                console.error("Unknown pseudo term event type: "+value.event);
+                        }
+                    });
+                });
+        
+        
+                CodeMirror.modeURL = "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/mode/%N/%N.min.js";
+        
+                var codeMirror = CodeMirror(document.getElementById('code-firepad-container'), {
+                    lineNumbers: true,
+                    mode: languages[currCodeLanguage].codeMirrorMode,
+                    lineWrapping: true,
+                    indentUnit: 4,
+                    indentWithTabs: true,
+                    autoCloseTags: true,
+                    autoCloseBrackets: true,
+                    matchTags: false,
+                    extraKeys: {
+                        "Ctrl-Space": "autocomplete"
+                    },
+                    styleActiveLine: true
+                });
+                codeMirror.setOption('extraKeys', {
+                    ...codeMirror.getOption('extraKeys'),
+                    [isMac ? 'Cmd-/' : 'Ctrl-/'](cm) {
+                        cm.toggleComment()
+                    },
+                    [isMac ? 'Cmd-Enter' : 'Ctrl-Enter'](cm) {
+                        userCalledExecCode()
+                    }
+                });
+                codeMirror.setOption("theme", "darcula");
+        
+                function loadCodeMirrorMode(editor, modeStr, dontSetMode) {
+                    var modeName = modeStr;
+                    if (modeStr.indexOf("/") > -1) {
+                        modeName = CodeMirror.findModeByMIME(modeStr).mode;
+                    }
+                    if (!dontSetMode) {
+                        editor.setOption("mode", modeStr);
+                    }
+                    console.log(modeStr, modeName);
+                    CodeMirror.autoLoadMode(editor, modeName);
+                }
+        
+                loadCodeMirrorMode(codeMirror, languages[currCodeLanguage].codeMirrorMode);
+        
+                var codeFirepad = Firepad.fromCodeMirror(codeFirepadRef, codeMirror, {
+                    defaultText: languages[currCodeLanguage].boilerplate,
+                    userId: '1nJde2tVuTGb'
+                });
+        
+                // Create FirepadUserList (with our desired userId).
+                var firepadUserList = FirepadUserList.fromDiv(codeFirepadRef.child('users'),
+                        document.getElementById('pad-userlist'), '1nJde2tVuTGb', 'Kurvin Hendricks');
+        
+                $execCodeBtn.click(function() {
+                    userCalledExecCode()
+                });
+        
+                function userCalledExecCode() {
+                    $execCodeBtn.addClass('is-loading');
+                    $execCodeBtn.attr('disabled', 'disabled');
+                    var codeValue = codeMirror.getValue();
+                    writeUserStartedExecToTermAndDB(codeValue);
+                    $.postJSON(talentAPIBaseURL+'/v1/interviews/13014/execute', {
+                        stdins: [],
+                        code: codeValue
+                    }, function(resp) {
+                        writeExecOutputToTermAndDB(resp);
+                        $execCodeBtn.removeClass('is-loading');
+                        $execCodeBtn.attr('disabled', false);
+                    }, function(err) {
+                        if (err.status !== 500 && err.responseJSON) {
+                            if (err.responseJSON.debug) {
+                                toastr.error(err.responseJSON.debug, err.responseJSON.message);
+                            } else {
+                                toastr.error(err.responseJSON.message)
+                            }
+                        } else {
+                            toastr.error('An error occurred executing your code, please try again in a few seconds. If this issue persists, please contact support');
+                        }
+                        $execCodeBtn.removeClass('is-loading');
+                        $execCodeBtn.attr('disabled', false);
+                    });
+                }
+        
+                function writeUserStartedExecToTermAndDB(code) {
+                    var newRecordKey = pseudoTermRef.push().key;
+                    updateItem = {
+                        event: 'userStartedExecution',
+                        payload: {
+                            userId: '1nJde2tVuTGb',
+                            userFullName: 'Kurvin Hendricks',
+                            userColor: firepadUserList.getCurrentUserColor(),
+                            code: code,
+                            codeLanguage: currCodeLanguage
+                        }
+                    };
+                    var updates = {};
+                    updates[newRecordKey] = updateItem;
+                    loadedPseudoTermRecords[newRecordKey] = updateItem;
+                    pseudoTermRef.update(updates);
+                    writeUserStartedExecToTerm(updateItem.payload);
+                }
+        
+                function writeUserStartedExecToTerm(userExecEvtPayload) {
+                    var $execTopEl = $("<div style=\"color: " + userExecEvtPayload.userColor + ";\"></div>");
+                    $execTopEl.text(">>> "+userExecEvtPayload.userFullName+" started executing the code ...");
+                    $pseudoTerminal.append($execTopEl);
+                    $pseudoTerminal.append("<br/>");
+                    scrollToBottomOfPseudoTerm()
+                }
+        
+                function writeExecOutputToTermAndDB(outputResp) {
+                    var newRecordKey = pseudoTermRef.push().key;
+                    var updateItem = {
+                        event: 'execAPIResponse',
+                        payload: outputResp
+                    };
+                    var updates = {};
+                    updates[newRecordKey] = updateItem;
+                    loadedPseudoTermRecords[newRecordKey] = updateItem;
+                    pseudoTermRef.update(updates);
+                    writeExecOutputToTerm(outputResp)
+                }
+        
+                function writeExecOutputToTerm(outputResp) {
+                    var data = outputResp.data;
+                    var execTopColor = data.message.type === "error" ? "red" : "chartreuse";
+                    var $execTopEl = $("<div style=\"color: " + execTopColor + ";\"></div>");
+                    var hasNoOutput = !data.stdouts || data.stdouts.length === 0 || (data.stdouts.length === 1 && data.stdouts[0] === "");
+                    var hasError = data.message.type === "error";
+                    if (!hasError) {
+                        $execTopEl.text(">>> "+data.message.type+": "+data.message.data);
+                        $pseudoTerminal.append($execTopEl);
+                        $pseudoTerminal.append("<br/>");
+                        if (hasNoOutput) {
+                            $pseudoTerminal.append("<div style=\"color: lightgrey;\">(no output)</div>");
+                            $pseudoTerminal.append("<br/>");
+                        }
+                    }
+                    if (!hasNoOutput) {
+                        for (var i = 0; i < data.stdouts.length; i++) {
+                            var addlEl = $("<div></div>");
+                            addlEl.text(data.stdouts[i]);
+                            $pseudoTerminal.append(addlEl);
+                            $pseudoTerminal.append("<br/>");
+                        }
+                    }
+                    if (hasError) {
+                        $execTopEl.text(data.message.data);
+                        $pseudoTerminal.append($execTopEl);
+                        $pseudoTerminal.append("<br/>");
+                    }
+                    scrollToBottomOfPseudoTerm();
+                }
+        
+                $('#tal-update-interview-form').on('submit', function(e) {
+                    e.preventDefault();
+                    putUpdateInterview({
+                        title: $("#tal-update-interview-title").val(),
+                        joinOpen: $('#interview-join-open-label').hasClass('active'),
+                        headline: '',
+                        primaryTopic: '',
+                        avatarUrl: 'https://cdn-course-logos.exlskills.com/course-java-basics.jpg',
+                        codeLanguage: currCodeLanguage
+                    }, function(resp) {
+                        console.log('Successfully updated the interview: ', resp);
+                        toastr.success('Interview successfully updated');
+                    }, function(err) {
+                        console.error(err);
+                        toastClassroomAPIError(err);
+                    });
+                });
+        
+                $langSelector.change(function() {
+                    writeUserChangedLangToCMAndTermAndSelectorAndDB(currCodeLanguage, $langSelector.val());
+                });
+        
+                function writeUserJoinedCallToTermAndDB() {
+                    var newRecordKey = pseudoTermRef.push().key;
+                    updateItem = {
+                        event: 'userJoinedCall',
+                        payload: {
+                            userId: '1nJde2tVuTGb',
+                            userFullName: 'Kurvin Hendricks',
+                            userColor: firepadUserList.getCurrentUserColor()
+                        }
+                    };
+                    var updates = {};
+                    updates[newRecordKey] = updateItem;
+                    loadedPseudoTermRecords[newRecordKey] = updateItem;
+                    pseudoTermRef.update(updates);
+                    writeUserJoinedCallToTerm(updateItem.payload);
+                }
+        
+                function writeUserJoinedCallToTerm(userEvtPayload) {
+                    var $execTopEl = $("<div style=\"color: " + userEvtPayload.userColor + ";\"></div>");
+                    $execTopEl.text(">>> "+userEvtPayload.userFullName + "  joined the live audio/video call");
+                    $pseudoTerminal.append($execTopEl);
+                    $pseudoTerminal.append("<br/>");
+                    scrollToBottomOfPseudoTerm();
+                }
+        
+                function writeUserChangedLangToCMAndTermAndSelectorAndDB(prevLang, nextLang) {
+                    var newRecordKey = pseudoTermRef.push().key;
+                    updateItem = {
+                        event: 'userChangedLanguage',
+                        payload: {
+                            userId: '1nJde2tVuTGb',
+                            userFullName: 'Kurvin Hendricks',
+                            userColor: firepadUserList.getCurrentUserColor(),
+                            prevCodeLanguage: currCodeLanguage,
+                            nextCodeLanguage: nextLang
+                        }
+                    };
+                    var updates = {};
+                    updates[newRecordKey] = updateItem;
+                    loadedPseudoTermRecords[newRecordKey] = updateItem;
+                    pseudoTermRef.update(updates);
+                    writeUserChangedLangToCMAndTermAndSelector(updateItem.payload, true);
+                    putUpdateInterview({
+                        title: 'Lurvin',
+                        headline: '',
+                        primaryTopic: '',
+                        avatarUrl: 'https://cdn-course-logos.exlskills.com/course-java-basics.jpg',
+                        codeLanguage: nextLang,
+                        joinOpen: true
+                    }, function(resp) {
+                        console.log('Successfully updated the interview: ', resp)
+                    }, function(err) {
+                        console.error('Error occurred updating the interview: ', err)
+                    });
+                }
+        
+        
+                function writeUserChangedLangToCMAndTermAndSelector(userEvtPayload, updateFormatText) {
+                    currCodeLanguage = userEvtPayload.nextCodeLanguage;
+                    // Set in selector
+                    $langSelector.val(currCodeLanguage);
+                    // Update codemirror mode
+                    loadCodeMirrorMode(codeMirror, languages[currCodeLanguage].codeMirrorMode);
+                    if (updateFormatText) {
+                        if (codeMirror.getValue().trim().length > 0 && codeMirror.getValue().trim() !== languages[userEvtPayload.prevCodeLanguage].boilerplate.trim()) {
+                            codeMirror.setValue("Your previous " + userEvtPayload.prevCodeLanguage + " code is preserved below" + "\n" + codeMirror.getValue());
+                        }
+                        codeMirror.lineComment({line: 0, ch: 0}, {line: codeMirror.lineCount(), ch: 100000});
+                        codeMirror.setValue(languages[currCodeLanguage].boilerplate  + "\n\n" +  codeMirror.getValue());
+                    }
+                    // Write to terminal
+                    var $execTopEl = $("<div style=\"color: " + userEvtPayload.userColor + ";\"></div>");
+                    $execTopEl.text(">>> "+userEvtPayload.userFullName+" Changed the code language from " + userEvtPayload.prevCodeLanguage + " to " + userEvtPayload.nextCodeLanguage);
+                    $pseudoTerminal.append($execTopEl);
+                    $pseudoTerminal.append("<br/>");
+                    scrollToBottomOfPseudoTerm();
+                }
+        
+                function scrollToBottomOfPseudoTerm() {
+                    $pseudoTerminal.scrollTop($pseudoTerminal[0].scrollHeight);
+                }
+        
+                function startConference(withVideo) {
+                    var options = {
+                        roomName: 'exlskillsInterview_RmcBDFc4bUfry3KODVW85bVC7jomZBnek7nn1oMC4RTxueImMGKWr6HDMXuVzQVIJNMyVL9yW5wav1xRxqhiiegtyorcxlJ8xXDUaZSna4utMqORXX1VsaXOUfi4ZG2U5Ff0obi8WAccKU84RdEJ3McFRO19r6CNvOKX9KiPJqZqIMovSjSAS5lIgyb0zL8Xle2IgxZsWxqC3qTOjgY5GuZeVtZ7Os7VhngWEcZEPXzTIkl5WiuYVpjFNBQaVsG0',
+                        parentNode: document.querySelector('#tal-jitsi-wrapper'),
+                        interfaceConfigOverwrite: {
+                            SHOW_JITSI_WATERMARK: false,
+                            SHOW_WATERMARK_FOR_GUESTS: false,
+                            DEFAULT_REMOTE_DISPLAY_NAME: 'Loading ...',
+                            TOOLBAR_BUTTONS: [
+                                "microphone", "camera", "desktop",
+                                "chat", "filmstrip",
+                                "sharedvideo","settings",
+                                "recording", "hangup", "videoquality"
+                            ],
+                            MAIN_TOOLBAR_BUTTONS: ['microphone', 'camera', 'desktop'],
+                            SETTINGS_SECTIONS: [ 'devices', 'language' ]
+                        }
+                    };
+                    var api = new JitsiMeetExternalAPI('meet.jit.si', options);
+                    if (!withVideo) {
+                        api.executeCommand('toggleVideo');
+                    }
+                    api.executeCommand('displayName', 'Kurvin Hendricks');
+                    api.executeCommand('avatarUrl', 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d&#x3D;robohash');
+                        api.executeCommand('email', 'kurvinhendricks@gmail.com');
+                    api.addEventListener('readyToClose', function() {
+                        api.dispose();
+                        $("#tal-jitsi-wrapper").empty();
+                        $joinConfBtnGrp.show();
+                    });
+                    writeUserJoinedCallToTermAndDB();
+                }
+        
+                $joinConfSansVideoBtn.click(function() {
+                    $joinConfBtnGrp.hide();
+                    startConference(false);
+                });
+        
+                $joinConfBtn.click(function() {
+                    $joinConfBtnGrp.hide();
+                    startConference(true);
+                });
+        
+        
+                $('ul.custom-tabs li').click(function(){
+                    var tabId = $(this).attr('data-tab');
+        
+                    $('ul.custom-tabs li').removeClass('current');
+                    $('.custom-tab-content').removeClass('current');
+        
+                    $(this).addClass('current');
+                    $("#"+tabId).addClass('current');
+                });
+        
+                function putUpdateInterview(putData, success, e) {
+                    $.putJSON(talentAPIBaseURL+'/v1/interviews/13014', putData, function(resp) {
+                        success(resp);
+                    }, function(err) {
+                        e(err);
+                    });
+                }
+        
+                setTimeout(function() {
+                    for (var lang in languages) {
+                        loadCodeMirrorMode(codeMirror, languages[lang].codeMirrorMode, true);
+                    }
+                }, 100);
+        
+            });
+        
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/edit/closebrackets.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/edit/closetag.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/edit/matchbrackets.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/edit/matchtags.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/hint/show-hint.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/hint/anyword-hint.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/search/search.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/search/searchcursor.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/search/jump-to-line.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/search/match-highlighter.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/selection/active-line.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/dialog/dialog.min.js"></script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/hint/show-hint.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/search/matchesonscrollbar.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/dialog/dialog.min.css" />
+        
+        <!-- CodeMirror Hint/Lint Libs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/addon/hint/javascript-hint.min.js"></script></div>
+        </div>
+    </div>
+</div>
+<!-- Include SPF in main template only, as it's not required in others -->
+<script src="/learn-en/assets/libs/spfjs/spf.js"></script>
+<script>
+    spf.init();
+</script>
+<!-- Libs JS -->
+<script src="https://cdn-static-assets.exlskills.com/libs/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn-static-assets.exlskills.com/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/dockerfile.min.js"></script>
+<!-- TODO add libs back when required -->
+<script src="https://cdn-static-assets.exlskills.com/libs/flatpickr/dist/flatpickr.min.js"></script>
+<!--<script src="https://cdn-static-assets.exlskills.com/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>-->
+<script src="https://cdn-static-assets.exlskills.com/libs/list.js/dist/list.min.js"></script>
+<!--<script src="https://cdn-static-assets.exlskills.com/libs/quill/dist/quill.min.js"></script>-->
+<!--<script src="https://cdn-static-assets.exlskills.com/libs/dropzone/dist/min/dropzone.min.js"></script>-->
+<script src="https://cdn-static-assets.exlskills.com/libs/select2/dist/js/select2.min.js"></script>
+<script src="https://cdn-static-assets.exlskills.com/libs/toastr/toastr.min.js"></script>
+<script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+<script src="https://cdn-static-assets.exlskills.com/libs/chart.js/dist/Chart.min.js"></script>
+<script src="https://cdn-static-assets.exlskills.com/libs/chart.js/Chart.extension.min.js"></script>
+
+<!-- Theme JS -->
+<script>
+    var themeMode = 'dark';
+    var uaIsBot = 'false';
+</script>
+<script src="https://cdn-static-assets.exlskills.com/js/theme.min.js"></script>
+
+<script>
+    var gqlEndpoint = 'https://gql-api.exlskills.com/graph';
+    var classroomAPIBaseURL = 'https://classroom-api.exlskills.com';
+    var talentAPIBaseURL = 'https://talent-api.exlskills.com';
+
+    $.httpJSON = function(url, method, data, success, error) {
+        if (typeof data !== 'string') {
+            data = JSON.stringify(data);
+        }
+        $.ajax({
+            url : url,
+            type: method,
+            data: data,
+            dataType: "json",
+            contentType: "application/json",
+            success: success,
+            error: error,
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true
+        });
+    };
+
+    $.postJSON = function(url, data, success, error) {
+        $.httpJSON(url, "post", data, success, error);
+    };
+
+    $.putJSON = function(url, data, success, error) {
+        $.httpJSON(url, "put", data, success, error);
+    };
+
+    $.xGetJSON = function(url, success, error) {
+        $.httpJSON(url, "get", undefined, success, error);
+    };
+
+    NProgress.configure({ showSpinner: false });
+    NProgress.configure({ trickleSpeed: 75 });
+    $(document).on("spfclick", function() {
+        // Show progress bar
+        NProgress.start();
+        $('#modalMobileExtendedSidebarNav').modal('hide');
+    });
+
+    $(document).on("spfrequest", function() {
+        // Increment progress as request is made
+        NProgress.inc();
+    });
+
+    $(document).on("spfprocess", function() {
+        // Set progress bar width to 100%
+        NProgress.done();
+    });
+
+    function manageVerifiedUserRequirement() {
+        // User verified
+        return
+    }
+
+    // On document ready on first load
+    $(manageVerifiedUserRequirement);
+
+    function setupCodeHLJS() {
+        $(".course-card-body pre code:not([class*='hljs'])").each(function() {
+            hljs.highlightBlock($(this).get(0))
+        });
+    }
+
+    function setupLogoutBtnHandler() {
+        $('.user-logout-btn').click(function(e) {
+            e.preventDefault();
+            $.postJSON('https://auth-api.exlskills.com/me/logout', {}, function(resp) {
+                window.location.href = '/';
+            });
+        });
+    }
+
+    function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+    }
+
+    function parseISOString(s) {
+        var b = s.split(/\D+/);
+        return new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6]));
+    }
+
+    function renderEXLDates() {
+        if (!window.moment) {
+            setTimeout(renderEXLDates, 100);
+            return;
+        }
+        $('.exl-iso-date:hidden').each(function() {
+            var $self = $(this);
+            $self.text(moment(parseISOString($self.text().trim())).format('MMMM Do YYYY, h:mm:ss a'));
+            $self.show();
+        });
+        $('.exl-from-now:hidden').each(function() {
+            var $self = $(this);
+            $self.text(moment(parseISOString($self.text().trim())).fromNow());
+            $self.show();
+        });
+        $('.exl-copyright').each(function() {
+            $(this).text(new Date().getFullYear());
+        });
+    }
+
+    $('.exl-ns-dropdown').on('show.bs.dropdown', function() {
+        if ($(window).width() < 992) {
+            $('body').addClass('exl-no-scroll');
+        }
+        _nsAPI.markRead();
+    });
+
+    $('.exl-ns-dropdown').on('hide.bs.dropdown', function() {
+        $('body').removeClass('exl-no-scroll');
+    });
+
+    function renderEXLAvatar() {
+        $('.exl-avatar').each(function() {
+            var $self = $(this);
+            var title = $self.attr('exl-avatar-value');
+            var parts = title.split(' ');
+            var txt = '';
+            switch (parts.length) {
+                case 0:
+                    txt = 'EC';
+                    break;
+                case 1:
+                    txt = parts[0].toUpperCase()[0] + parts[0].toUpperCase()[1] || '';
+                    break;
+                default:
+                    txt = parts[0].toUpperCase()[0] + parts[1].toUpperCase()[0];
+                    break;
+            }
+            $self.html(`<div class="content">${txt}</div>`);
+        });
+    }
+
+
+    $(document).on("spfdone", function() {
+        // Finish request and remove progress bar
+        NProgress.remove();
+        setupCodeHLJS();
+        setupLogoutBtnHandler();
+        renderEXLAvatar();
+        $('#mobile-sidebar-extension').html($('#sidebar .exl-sidebar-menu-content')[0].outerHTML);
+        manageVerifiedUserRequirement();
+        $('[data-toggle="popover"]').popover();
+        renderEXLDates();
+        if (window._nsAPI) {
+            _nsAPI.initialize()
+        }
+    });
+
+    $(renderEXLDates);
+    $(renderEXLAvatar);
+
+    setupCodeHLJS();
+    setupLogoutBtnHandler();
+
+    $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    $.fn.isInViewportEntirely = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+
+        return elementTop > viewportTop && elementBottom < viewportBottom;
+    };
+
+    function uuidv4() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+
+    $.escapeLiteralSel = function(sel) {
+        return sel.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g,'\\$1')
+    };
+
+    function refreshJWT(callback, errorCallback) {
+        $.ajax({
+            url : 'https://auth-api.exlskills.com/auth/jwt-refresh?'+(new Date()).getTime(),
+            type: "get",
+            success: callback,
+            error: errorCallback,
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true
+        });
+    }
+
+    $(function() {
+        var modalIds = ['modalManageCoins', 'modalAddCard', 'modalCheckout', 'modalAuthenticate', 'modalAuthenticateLearn'];
+        modalIds.forEach(function(id) {
+            $('#'+id).on('hide.bs.modal', function() {
+                window.location.hash = '';
+            });
+        });
+        function showModalsWhenHashEq() {
+            modalIds.forEach(function(id) {
+                if (window.location.hash.indexOf('#!'+id) > -1) {
+                    if (window.location.hash === '#!modalManageCoins=min_ic' || window.location.hash === "#!modalAddCard=min_ic") {
+                        drift.on('ready', function(api) {
+                            api.sidebar.close();
+                        });
+                    }
+                    $('#'+id).modal('show');
+                }
+            });
+        }
+        $(window).on('hashchange', function() {
+            showModalsWhenHashEq();
+        });
+        showModalsWhenHashEq();
+    });
+    $(function() {
+        $('[data-tooltip="true"]').tooltip();
+    });
+
+    $(function() {
+        if (!window.localStorage.toastOnLoad || window.localStorage.toastOnLoad === "") {
+            return;
+        }
+        var t = JSON.parse(window.localStorage.toastOnLoad);
+        switch (t.intent) {
+            case 'error':
+                toastr.error(t.message, t.title);
+                break;
+            case 'warning':
+                toastr.warning(t.message, t.title);
+                break;
+            case 'success':
+                toastr.success(t.message, t.title);
+                break;
+            default:
+                toastr.info(t.message, t.title);
+                break;
+        }
+        window.localStorage.removeItem('toastOnLoad');
+    });
+
+    var _WSCQ_quiz_currentUserWorkspace = null;
+    var _WSCQ_quiz_currentUserWorkspaceId = null;
+    window.addEventListener('message', function(evt) {
+        try {
+            if (evt.data && (typeof evt.data === 'string' || evt.data instanceof String)) {
+                var data = JSON.parse(evt.data);
+            } else {
+                var data = evt.data;
+            }
+            if (data && data.event === 'workspace.changed' && data.workspaceId === _WSCQ_quiz_currentUserWorkspaceId) {
+                _WSCQ_quiz_currentUserWorkspace = JSON.stringify(data.payload);
+            }
+        } catch (error) {
+            console.log('invalid iframe msg: ', evt, ',ignoring error: ', error)
+        }
+    });
+
+    function subscribeToMailingList(email, campaign, onSuccess, onFailure) {
+        $.postJSON('https://auth-api.exlskills.com/mailing-list', {
+            email: email,
+            campaign: campaign,
+            formUrl: window.location.href
+        }, onSuccess, onFailure);
+    }
+
+    function htmlDecode(input){
+        var doc = new DOMParser().parseFromString(input, "text/html");
+        return doc.documentElement.textContent;
+    }
+
+    function updateUserProfileGQL(locale, profile, onSuccess, onFailure) {
+        var m = `mutation UpdateUserProfileMutation(
+                    $input: UpdateUserProfileInput!
+                ) {
+                updateUserProfile(input: $input) {
+                    completionObj {
+                        code
+                        msg
+                        processed
+                        modified
+                    }
+                }
+            }
+            `;
+        var inputData = {
+            locale: locale,
+            profile: profile
+        };
+        $.postJSON(gqlEndpoint, {
+            query: m,
+            variables: {
+                input: inputData
+            }
+        }, onSuccess, onFailure);
+    }
+
+    function setCardInteractionGQL(inputData, onSuccess, onError) {
+        var m = `mutation setCardInteractionMutation(
+                    $input: SetCardInteractionInput!
+                ) {
+                setCardInteraction(input: $input) {
+                    completionObj {
+                        code
+                        msg
+                        processed
+                        modified
+                    }
+                }
+            }
+            `;
+        if (inputData && inputData.card_id) {
+            $.postJSON(gqlEndpoint, {
+                query: m,
+                variables: {
+                    input: inputData
+                }
+            }, onSuccess, onError);
+        }
+    }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+<script src="https://cdn-static-assets.exlskills.com/libs/moment/moment.min.js"></script>
+<script src="https://cdn-static-assets.exlskills.com/libs/moment-timezone/moment-timezone-with-data-2012-2022.min.js"></script>
+<script src="https://cdn-static-assets.exlskills.com/libs/intl-tel-input/v15.0.0/js/intlTelInput.js"></script>
+<!-- Inline cookies lib -->
+<script>
+    /*!
+ * JavaScript Cookie v2.2.0
+ * https://github.com/js-cookie/js-cookie
+ *
+ * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
+ * Released under the MIT license
+ */
+    ;(function (factory) {
+        var registeredInModuleLoader = false;
+        if (typeof define === 'function' && define.amd) {
+            define(factory);
+            registeredInModuleLoader = true;
+        }
+        if (typeof exports === 'object') {
+            module.exports = factory();
+            registeredInModuleLoader = true;
+        }
+        if (!registeredInModuleLoader) {
+            var OldCookies = window.Cookies;
+            var api = window.Cookies = factory();
+            api.noConflict = function () {
+                window.Cookies = OldCookies;
+                return api;
+            };
+        }
+    }(function () {
+        function extend () {
+            var i = 0;
+            var result = {};
+            for (; i < arguments.length; i++) {
+                var attributes = arguments[ i ];
+                for (var key in attributes) {
+                    result[key] = attributes[key];
+                }
+            }
+            return result;
+        }
+
+        function init (converter) {
+            function api (key, value, attributes) {
+                var result;
+                if (typeof document === 'undefined') {
+                    return;
+                }
+
+                // Write
+
+                if (arguments.length > 1) {
+                    attributes = extend({
+                        path: '/'
+                    }, api.defaults, attributes);
+
+                    if (typeof attributes.expires === 'number') {
+                        var expires = new Date();
+                        expires.setMilliseconds(expires.getMilliseconds() + attributes.expires * 864e+5);
+                        attributes.expires = expires;
+                    }
+
+                    // We're using "expires" because "max-age" is not supported by IE
+                    attributes.expires = attributes.expires ? attributes.expires.toUTCString() : '';
+
+                    try {
+                        result = JSON.stringify(value);
+                        if (/^[\{\[]/.test(result)) {
+                            value = result;
+                        }
+                    } catch (e) {}
+
+                    if (!converter.write) {
+                        value = encodeURIComponent(String(value))
+                                .replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent);
+                    } else {
+                        value = converter.write(value, key);
+                    }
+
+                    key = encodeURIComponent(String(key));
+                    key = key.replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent);
+                    key = key.replace(/[\(\)]/g, escape);
+
+                    var stringifiedAttributes = '';
+
+                    for (var attributeName in attributes) {
+                        if (!attributes[attributeName]) {
+                            continue;
+                        }
+                        stringifiedAttributes += '; ' + attributeName;
+                        if (attributes[attributeName] === true) {
+                            continue;
+                        }
+                        stringifiedAttributes += '=' + attributes[attributeName];
+                    }
+                    return (document.cookie = key + '=' + value + stringifiedAttributes);
+                }
+
+                // Read
+
+                if (!key) {
+                    result = {};
+                }
+
+                // To prevent the for loop in the first place assign an empty array
+                // in case there are no cookies at all. Also prevents odd result when
+                // calling "get()"
+                var cookies = document.cookie ? document.cookie.split('; ') : [];
+                var rdecode = /(%[0-9A-Z]{2})+/g;
+                var i = 0;
+
+                for (; i < cookies.length; i++) {
+                    var parts = cookies[i].split('=');
+                    var cookie = parts.slice(1).join('=');
+
+                    if (!this.json && cookie.charAt(0) === '"') {
+                        cookie = cookie.slice(1, -1);
+                    }
+
+                    try {
+                        var name = parts[0].replace(rdecode, decodeURIComponent);
+                        cookie = converter.read ?
+                                converter.read(cookie, name) : converter(cookie, name) ||
+                                cookie.replace(rdecode, decodeURIComponent);
+
+                        if (this.json) {
+                            try {
+                                cookie = JSON.parse(cookie);
+                            } catch (e) {}
+                        }
+
+                        if (key === name) {
+                            result = cookie;
+                            break;
+                        }
+
+                        if (!key) {
+                            result[name] = cookie;
+                        }
+                    } catch (e) {}
+                }
+
+                return result;
+            }
+
+            api.set = api;
+            api.get = function (key) {
+                return api.call(api, key);
+            };
+            api.getJSON = function () {
+                return api.apply({
+                    json: true
+                }, [].slice.call(arguments));
+            };
+            api.defaults = {};
+
+            api.remove = function (key, attributes) {
+                api(key, '', extend(attributes, {
+                    expires: -1
+                }));
+            };
+
+            api.withConverter = init;
+
+            return api;
+        }
+
+        return init(function () {});
+    }));
+</script>
+
+<script>
+    Chart.pluginService.register({
+        beforeDraw: function (chart) {
+            if (chart.config.options.elements.center) {
+                //Get ctx from string
+                var ctx = chart.chart.ctx;
+
+                //Get options from the center object in options
+                var centerConfig = chart.config.options.elements.center;
+                var fontStyle = centerConfig.fontStyle || 'Arial';
+                var txt = centerConfig.text;
+                var color = centerConfig.color || '#000';
+                var sidePadding = centerConfig.sidePadding || 20;
+                var sidePaddingCalculated = (sidePadding/100) * (chart.innerRadius * 2)
+                //Start with a base font of 30px
+                ctx.font = "30px " + fontStyle;
+
+                //Get the width of the string and also the width of the element minus 10 to give it 5px side padding
+                var stringWidth = ctx.measureText(txt).width;
+                var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
+
+                // Find out how much the font can grow in width.
+                var widthRatio = elementWidth / stringWidth;
+                var newFontSize = Math.floor(30 * widthRatio);
+                var elementHeight = (chart.innerRadius * 2);
+
+                // Pick a new font size so it will not be larger than the height of label.
+                var fontSizeToUse = Math.min(newFontSize, elementHeight);
+
+                //Set font settings to draw it correctly.
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
+                var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 2);
+                ctx.font = fontSizeToUse+"px " + fontStyle;
+                ctx.fillStyle = color;
+
+                //Draw text in center
+                ctx.fillText(txt, centerX, centerY);
+            }
+        }
+    });
+
+
+    var _authModalTelInput = null;
+    $(function() {
+        _authModalTelInput = window.intlTelInput(document.querySelector("#auth-modal-phone"), {
+            utilsScript: 'https://cdn-static-assets.exlskills.com/libs/intl-tel-input/v15.0.0/js/utils.js',
+            preferredCountries: ['us', 'sg', 'in', 'hk', 'cn'],
+            initialCountry: "auto",
+            dropdownContainer: document.body,
+            geoIpLookup: function(success, failure) {
+                $.get('https://auth-api.exlskills.com/info/geoloc').always(function(resp) {
+                    var countryCode = (resp && resp.countryCode) ? resp.countryCode : "us";
+                    success(countryCode);
+                });
+            },
+        });
+    });
+
+    var _authModalLearnTelInput = null;
+    $(function() {
+        _authModalLearnTelInput = window.intlTelInput(document.querySelector("#auth-learn-modal-phone"), {
+            utilsScript: 'https://cdn-static-assets.exlskills.com/libs/intl-tel-input/v15.0.0/js/utils.js',
+            preferredCountries: ['us', 'sg', 'in', 'hk', 'cn'],
+            initialCountry: "auto",
+            dropdownContainer: document.body,
+            /* "http://ip-api.com/json" */
+            geoIpLookup: function(success, failure) {
+                $.get('https://auth-api.exlskills.com/info/geoloc').always(function(resp) {
+                    var countryCode = (resp && resp.countryCode) ? resp.countryCode : "us";
+                    success(countryCode);
+                });
+            },
+        });
+    });
+
+    function setThemeModeCookie(mode) {
+        Cookies.set('themeMode', mode, {path: '/', expires: 1024});
+    }
+
+    $(function() {
+        var themeModeFromLocalStorage = localStorage.getItem('themeMode');
+        if (themeModeFromLocalStorage && themeModeFromLocalStorage !== 'light') {
+            // This is in order to maintain backwards compatibility (requires a reload)
+            setThemeModeCookie(themeModeFromLocalStorage);
+            localStorage.removeItem('themeMode');
+            window.location.reload();
+            return;
+        }
+        if (!Cookies.get('themeMode')) {
+            setThemeModeCookie('light');
+        }
+    });
+
+    function sidebarChangeTheme(mode) {
+        Cookies.remove('themeMode', {path: '/'});
+        setThemeModeCookie(mode);
+        window.location.reload();
+    }
+</script>
+
+    <!-- Notifications API -->
+    <script>
+        var _nsAPI = {
+            noNotificationsDiv: `
+            <div>
+    <div class="text-center">
+    
+                    <img src="https://cdn-static-assets.exlskills.com/img/illustrations/scale.svg" alt="..." class="img-fluid" style="max-width: 182px;">
+    
+                    <h1>
+                All caught up!
+                    </h1>
+    
+                    <p class="text-muted">
+                You don&#x27;t have any notifications in your inbox right now. Great job!
+                    </p>
+    
+                    </div>
+    </div>
+            `,
+            renderNotification: function (notification) {
+                var creatorName = notification.creatorName === '' ? 'Anonymous' : notification.creatorName;
+                return `
+                    <div class="list-group-item px-0">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="avatar">
+                                    <div class="avatar-img">
+                                        <div class="exl-avatar" exl-avatar-value="${creatorName}" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col ml-n2">
+                                <div class="small text-muted">
+                                    ${notification.html}
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                ${notification.seen ? "" : `<small class="text-danger exl-notification-unread-star">* </small>`}
+                                <small class="text-muted exl-from-now">
+                                    ${notification.createdAt}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            notifications: [],
+            unreadIds: [],
+            initialize: function () {
+                _nsAPI.loadNotifications(function () {
+                    _nsAPI.present();
+                });
+            },
+            loadNotifications: function (successCB) {
+                $.xGetJSON(classroomAPIBaseURL + '/v1/me/notifications/', function (resp) {
+                    _nsAPI.notifications = resp.data;
+                    _nsAPI.unreadIds = [];
+                    for (var i = 0; i < _nsAPI.notifications.length; i++) {
+                        if (!_nsAPI.notifications[i].seen) {
+                            _nsAPI.unreadIds.push(_nsAPI.notifications[i].id)
+                        }
+                    }
+                    if (successCB) {
+                        successCB();
+                    }
+                }, function (err) {
+                    console.error(err);
+                    // toastr.error('An error occurred getting your notifications');
+                })
+            },
+            present: function () {
+                var notificationDivs = "";
+                for (var i = 0; i < _nsAPI.notifications.length; i++) {
+                    notificationDivs += _nsAPI.renderNotification(_nsAPI.notifications[i])+"\n";
+                }
+                $("#topbar-ns-list-group").html(notificationDivs ? notificationDivs : _nsAPI.noNotificationsDiv);
+                renderEXLAvatar();
+                renderEXLDates();
+                if (_nsAPI.unreadIds.length > 0) {
+                    $("#topbar-ns-bell-wrapper").addClass('active');
+                } else {
+                    $("#topbar-ns-bell-wrapper").removeClass('active');
+                }
+            },
+            markRead: function() {
+                if (_nsAPI.unreadIds.length < 1) {
+                    return
+                }
+                $.postJSON(classroomAPIBaseURL + '/v1/me/notifications/mark-read', {notificationIds: _nsAPI.unreadIds}, function (resp) {
+                    console.log(resp);
+                    $("#topbar-ns-bell-wrapper").removeClass('active');
+                    $(".exl-notification-unread-star").hide();
+                    // TODO what else to do after notifications have been marked as read?
+                }, function (err) {
+                    console.error(err);
+                    // toastr.error('An error occurred marking some of your notifications as read');
+                });
+            }
+        };
+        _nsAPI.initialize();
+    </script>
+<!-- Tour -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"></script>
+<script>
+    // TODO manage tour state and decide whether or not to launch it
+</script>
+<!-- Subscribe desktop notifications AND chat -->
+    <script>
+        "use strict";
+
+        !function() {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+                        t.factory = function(e) {
+                            return function() {
+                                var n = Array.prototype.slice.call(arguments);
+                                return n.unshift(e), t.push(n), t;
+                            };
+                        }, t.methods.forEach(function(e) {
+                    t[e] = t.factory(e);
+                }), t.load = function(t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('c3emegnhzgmu');
+    </script>
+    <script>
+        drift.identify('1nJde2tVuTGb', {
+            email: 'kurvinhendricks@gmail.com',
+            full_name: 'Kurvin Hendricks'
+        });
+
+        (function() {
+            /* Add this class to any elements you want to use to open Drift.
+             *
+             * Examples:
+             * - <a class="drift-open-chat">Questions? We're here to help!</a>
+             * - <button class="drift-open-chat">Chat now!</button>
+             *
+             * You can have any additional classes on those elements that you
+             * would ilke.
+             */
+            var DRIFT_CHAT_SELECTOR = '.drift-open-chat';
+            /* http://youmightnotneedjquery.com/#ready */
+            function ready(fn) {
+                $(document).on("spfdone", function() {
+                    fn();
+                });
+                $(document).on("infiniscrolldone", function() {
+                    fn();
+                });
+                if (document.readyState != 'loading') {
+                    fn();
+                } else if (document.addEventListener) {
+                    document.addEventListener('DOMContentLoaded', fn);
+                } else {
+                    document.attachEvent('onreadystatechange', function() {
+                        if (document.readyState != 'loading')
+                            fn();
+                    });
+                }
+            }
+            /* http://youmightnotneedjquery.com/#each */
+            function forEachElement(selector, fn) {
+                var elements = document.querySelectorAll(selector);
+                for (var i = 0; i < elements.length; i++)
+                    fn(elements[i], i);
+            }
+            function openSidebar(driftApi, event) {
+                event.preventDefault();
+                driftApi.sidebar.open();
+                return false;
+            }
+            ready(function() {
+                drift.on('ready', function(api) {
+                    var handleClick = openSidebar.bind(this, api);
+                    forEachElement(DRIFT_CHAT_SELECTOR, function(el) {
+                        el.addEventListener('click', handleClick);
+                    });
+                });
+            });
+        })();
+
+        // Classroom API Utils
+        function toastClassroomAPIError(err) {
+            if (!err) {
+                return
+            }
+            if (err.responseJSON && err.responseJSON.message) {
+                if (err.responseJSON.debug) {
+                    toastr.error(err.responseJSON.debug, err.responseJSON.message);
+                } else {
+                    toastr.error(err.responseJSON.message);
+                }
+            } else {
+                toastr.error("Oops, something went wrong!");
+            }
+        }
+    </script>
+
+    <!-- Put subscribers into an iframe to avoid conflicts of firebase apps/instances -->
+    <iframe src="/learn-en/subscribers-iframe" style="display: none;"></iframe>
+
+<!-- Deferred Styles -->
+<noscript id="deferred-styles">
+    <link rel="stylesheet" href="https://cdn-static-assets.exlskills.com/libs/intl-tel-input/v15.0.0/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdn-static-assets.exlskills.com/fonts/feather/feather.min.css">
+    <link rel="stylesheet" href="https://cdn-static-assets.exlskills.com/libs/highlight/styles/vs2015.min.css">
+    <link rel="stylesheet" href="https://cdn-static-assets.exlskills.com/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdn-static-assets.exlskills.com/libs/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <link rel="stylesheet" href="https://cdn-static-assets.exlskills.com/libs/toastr/toastr.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css"/>
+    <link rel="stylesheet" href="https://cdn-static-assets.exlskills.com/css/custom.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"></noscript>
+<script>
+    var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement);
+        addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+</script>
+
+<script>
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+                .register("/learn-en/sw.js")
+                .then(function() { console.log("Service Worker Registered"); });
+    }
+</script>
+
+<script type="text/javascript">jQl.boot();</script>
+
+<script>
+    console.log(`
+    _____            __                  ________  __    __  __                  __        __  __  __
+   /     |          /  |                /        |/  |  /  |/  |                /  |      /  |/  |/  |
+   $$$$$ |  ______  $$/  _______        $$$$$$$$/ $$ |  $$ |$$ |        _______ $$ |   __ $$/ $$ |$$ |  _______
+      $$ | /      \\ /  |/       \\       $$ |__    $$  \\/$$/ $$ |       /       |$$ |  /  |/  |$$ |$$ | /       |
+ __   $$ |/$$$$$$  |$$ |$$$$$$$  |      $$    |    $$  $$<  $$ |      /$$$$$$$/ $$ |_/$$/ $$ |$$ |$$ |/$$$$$$$/
+/  |  $$ |$$ |  $$ |$$ |$$ |  $$ |      $$$$$/      $$$$  \\ $$ |      $$      \\ $$   $$<  $$ |$$ |$$ |$$      \\
+$$ \\__$$ |$$ \\__$$ |$$ |$$ |  $$ |      $$ |_____  $$ /$$  |$$ |_____  $$$$$$  |$$$$$$  \\ $$ |$$ |$$ | $$$$$$  |
+$$    $$/ $$    $$/ $$ |$$ |  $$ |      $$       |$$ |  $$ |$$       |/     $$/ $$ | $$  |$$ |$$ |$$ |/     $$/
+ $$$$$$/   $$$$$$/  $$/ $$/   $$/       $$$$$$$$/ $$/   $$/ $$$$$$$$/ $$$$$$$/  $$/   $$/ $$/ $$/ $$/ $$$$$$$/
+
+Email jobs@exlskills.com and check out our open work at https://github.com/exlskills to join us today!
+
+    `)
+</script></body>
+</html>
