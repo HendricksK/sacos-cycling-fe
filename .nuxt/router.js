@@ -3,15 +3,15 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _23360ca3 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
-const _7ca8a0e0 = () => interopDefault(import('../pages/club.vue' /* webpackChunkName: "pages/club" */))
-const _42edaaaa = () => interopDefault(import('../pages/history.vue' /* webpackChunkName: "pages/history" */))
-const _3049a143 = () => interopDefault(import('../pages/manager.vue' /* webpackChunkName: "pages/manager" */))
-const _719b6110 = () => interopDefault(import('../pages/rider.vue' /* webpackChunkName: "pages/rider" */))
-const _502dd012 = () => interopDefault(import('../pages/store.vue' /* webpackChunkName: "pages/store" */))
-const _32e8016c = () => interopDefault(import('../pages/test.vue' /* webpackChunkName: "pages/test" */))
-const _c2e0693e = () => interopDefault(import('../pages/track.vue' /* webpackChunkName: "pages/track" */))
-const _42ede768 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _303f5598 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
+const _a184de42 = () => interopDefault(import('../pages/club.vue' /* webpackChunkName: "pages/club" */))
+const _f3afda0a = () => interopDefault(import('../pages/history.vue' /* webpackChunkName: "pages/history" */))
+const _73840994 = () => interopDefault(import('../pages/manager.vue' /* webpackChunkName: "pages/manager" */))
+const _3645a9a1 = () => interopDefault(import('../pages/rider.vue' /* webpackChunkName: "pages/rider" */))
+const _c6d93ef0 = () => interopDefault(import('../pages/store.vue' /* webpackChunkName: "pages/store" */))
+const _2079e2bb = () => interopDefault(import('../pages/test.vue' /* webpackChunkName: "pages/test" */))
+const _633a13f2 = () => interopDefault(import('../pages/track.vue' /* webpackChunkName: "pages/track" */))
+const _07982ff9 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -31,39 +31,39 @@ export const routerOptions = {
 
   routes: [{
     path: "/about",
-    component: _23360ca3,
+    component: _303f5598,
     name: "about"
   }, {
     path: "/club",
-    component: _7ca8a0e0,
+    component: _a184de42,
     name: "club"
   }, {
     path: "/history",
-    component: _42edaaaa,
+    component: _f3afda0a,
     name: "history"
   }, {
     path: "/manager",
-    component: _3049a143,
+    component: _73840994,
     name: "manager"
   }, {
     path: "/rider",
-    component: _719b6110,
+    component: _3645a9a1,
     name: "rider"
   }, {
     path: "/store",
-    component: _502dd012,
+    component: _c6d93ef0,
     name: "store"
   }, {
     path: "/test",
-    component: _32e8016c,
+    component: _2079e2bb,
     name: "test"
   }, {
     path: "/track",
-    component: _c2e0693e,
+    component: _633a13f2,
     name: "track"
   }, {
     path: "/",
-    component: _42ede768,
+    component: _07982ff9,
     name: "index"
   }],
 

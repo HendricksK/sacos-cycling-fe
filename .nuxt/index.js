@@ -12,8 +12,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_http_5071c45a from 'nuxt_plugin_http_5071c45a' // Source: ./http.js (mode: 'all')
-import nuxt_plugin_googleanalytics_21de4b30 from 'nuxt_plugin_googleanalytics_21de4b30' // Source: ./google-analytics.js (mode: 'client')
+import nuxt_plugin_http_0586fd2b from 'nuxt_plugin_http_0586fd2b' // Source: ./http.js (mode: 'all')
+import nuxt_plugin_googleanalytics_41d7d281 from 'nuxt_plugin_googleanalytics_41d7d281' // Source: ./google-analytics.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -166,12 +166,12 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_http_5071c45a === 'function') {
-    await nuxt_plugin_http_5071c45a(app.context, inject)
+  if (typeof nuxt_plugin_http_0586fd2b === 'function') {
+    await nuxt_plugin_http_0586fd2b(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_googleanalytics_21de4b30 === 'function') {
-    await nuxt_plugin_googleanalytics_21de4b30(app.context, inject)
+  if (process.client && typeof nuxt_plugin_googleanalytics_41d7d281 === 'function') {
+    await nuxt_plugin_googleanalytics_41d7d281(app.context, inject)
   }
 
   // Lock enablePreview in context

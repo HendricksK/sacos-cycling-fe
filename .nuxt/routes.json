@@ -2,55 +2,64 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/Users/khendricks/sacos-cycling/fe/pages/about.vue",
-    "chunkName": "pages/about"
+    "component": "/home/maverick/projects/python/sacos/fe/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_303f5598"
   },
   {
     "name": "club",
     "path": "/club",
-    "component": "/Users/khendricks/sacos-cycling/fe/pages/club.vue",
-    "chunkName": "pages/club"
+    "component": "/home/maverick/projects/python/sacos/fe/pages/club.vue",
+    "chunkName": "pages/club",
+    "_name": "_a184de42"
   },
   {
     "name": "history",
     "path": "/history",
-    "component": "/Users/khendricks/sacos-cycling/fe/pages/history.vue",
-    "chunkName": "pages/history"
+    "component": "/home/maverick/projects/python/sacos/fe/pages/history.vue",
+    "chunkName": "pages/history",
+    "_name": "_f3afda0a"
   },
   {
     "name": "manager",
     "path": "/manager",
-    "component": "/Users/khendricks/sacos-cycling/fe/pages/manager.vue",
-    "chunkName": "pages/manager"
+    "component": "/home/maverick/projects/python/sacos/fe/pages/manager.vue",
+    "chunkName": "pages/manager",
+    "_name": "_73840994"
   },
   {
     "name": "rider",
     "path": "/rider",
-    "component": "/Users/khendricks/sacos-cycling/fe/pages/rider.vue",
-    "chunkName": "pages/rider"
+    "component": "/home/maverick/projects/python/sacos/fe/pages/rider.vue",
+    "chunkName": "pages/rider",
+    "_name": "_3645a9a1"
   },
   {
     "name": "store",
     "path": "/store",
-    "component": "/Users/khendricks/sacos-cycling/fe/pages/store.vue",
-    "chunkName": "pages/store"
+    "component": "/home/maverick/projects/python/sacos/fe/pages/store.vue",
+    "chunkName": "pages/store",
+    "_name": "_c6d93ef0"
   },
   {
     "name": "test",
     "path": "/test",
-    "component": "/Users/khendricks/sacos-cycling/fe/pages/test.vue",
-    "chunkName": "pages/test"
+    "component": "/home/maverick/projects/python/sacos/fe/pages/test.vue",
+    "chunkName": "pages/test",
+    "_name": "_2079e2bb"
   },
   {
     "name": "track",
     "path": "/track",
-    "component": "/Users/khendricks/sacos-cycling/fe/pages/track.vue",
-    "chunkName": "pages/track"
+    "component": "/home/maverick/projects/python/sacos/fe/pages/track.vue",
+    "chunkName": "pages/track",
+    "_name": "_633a13f2"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/khendricks/sacos-cycling/fe/pages/index.vue",
-    "chunkName": "pages/index"
+    "component": "/home/maverick/projects/python/sacos/fe/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_07982ff9"
   }
 ]
