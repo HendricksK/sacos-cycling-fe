@@ -1,0 +1,56 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/khendricks/sacos-cycling/fe/pages/about.vue",
+    "chunkName": "pages/about"
+  },
+  {
+    "name": "club",
+    "path": "/club",
+    "component": "/Users/khendricks/sacos-cycling/fe/pages/club.vue",
+    "chunkName": "pages/club"
+  },
+  {
+    "name": "history",
+    "path": "/history",
+    "component": "/Users/khendricks/sacos-cycling/fe/pages/history.vue",
+    "chunkName": "pages/history"
+  },
+  {
+    "name": "manager",
+    "path": "/manager",
+    "component": "/Users/khendricks/sacos-cycling/fe/pages/manager.vue",
+    "chunkName": "pages/manager"
+  },
+  {
+    "name": "rider",
+    "path": "/rider",
+    "component": "/Users/khendricks/sacos-cycling/fe/pages/rider.vue",
+    "chunkName": "pages/rider"
+  },
+  {
+    "name": "store",
+    "path": "/store",
+    "component": "/Users/khendricks/sacos-cycling/fe/pages/store.vue",
+    "chunkName": "pages/store"
+  },
+  {
+    "name": "test",
+    "path": "/test",
+    "component": "/Users/khendricks/sacos-cycling/fe/pages/test.vue",
+    "chunkName": "pages/test"
+  },
+  {
+    "name": "track",
+    "path": "/track",
+    "component": "/Users/khendricks/sacos-cycling/fe/pages/track.vue",
+    "chunkName": "pages/track"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/khendricks/sacos-cycling/fe/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]

@@ -1,0 +1,20 @@
+/* overriding bulma CSS */
+
+.notification.is-info {
+    background-color: #e3b602;
+}
+
+#news .notification {
+    padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+}
+
+#news .notification .image img {
+    max-height: 250px;
+    width: auto;
+    margin: auto;
+}
+
+#news .notification p {
+    padding-top: 1em;
+    font-size: 1em;
+}

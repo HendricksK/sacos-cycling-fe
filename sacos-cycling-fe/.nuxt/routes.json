@@ -3,63 +3,54 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_6e325f1f"
+    "chunkName": "pages/about"
   },
   {
     "name": "club",
     "path": "/club",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/club.vue",
-    "chunkName": "pages/club",
-    "_name": "_4645c4d8"
+    "chunkName": "pages/club"
   },
   {
     "name": "history",
     "path": "/history",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/history.vue",
-    "chunkName": "pages/history",
-    "_name": "_7fc163b4"
+    "chunkName": "pages/history"
   },
   {
     "name": "manager",
     "path": "/manager",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/manager.vue",
-    "chunkName": "pages/manager",
-    "_name": "_a5097682"
+    "chunkName": "pages/manager"
   },
   {
     "name": "rider",
     "path": "/rider",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/rider.vue",
-    "chunkName": "pages/rider",
-    "_name": "_86d098e8"
+    "chunkName": "pages/rider"
   },
   {
     "name": "store",
     "path": "/store",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/store.vue",
-    "chunkName": "pages/store",
-    "_name": "_22e56a73"
+    "chunkName": "pages/store"
   },
   {
     "name": "test",
     "path": "/test",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/test.vue",
-    "chunkName": "pages/test",
-    "_name": "_4e196f70"
+    "chunkName": "pages/test"
   },
   {
     "name": "track",
     "path": "/track",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/track.vue",
-    "chunkName": "pages/track",
-    "_name": "_2ce7c446"
+    "chunkName": "pages/track"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/khendricks/sacos-cycling/fe/sacos-cycling-fe/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_e42b8c38"
+    "chunkName": "pages/index"
   }
 ]
