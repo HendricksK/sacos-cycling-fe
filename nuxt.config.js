@@ -9,7 +9,7 @@ export default {
     base: '/'
   },
    modules: [
-    '@nuxt/http',
+    '@nuxt/http'
   ],
   http: {
     // proxyHeaders: false
@@ -19,10 +19,11 @@ export default {
     '@/assets/css/base.css', //base css, will be replaced with bulma eeventually
     '@/assets/css/overrides.css', //overrides css, will override base and bulma
   ],
-  buildModules: [
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-176051888-1'
-    }]
+  plugins: [
+    { 
+      src: '~plugins/ga.js',
+      mode: 'client' 
+    }
   ]
 }
 

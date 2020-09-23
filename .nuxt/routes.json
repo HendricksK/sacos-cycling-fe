@@ -7,6 +7,13 @@
     "_name": "_303f5598"
   },
   {
+    "name": "article",
+    "path": "/article",
+    "component": "/home/maverick/projects/python/sacos/fe/pages/article.vue",
+    "chunkName": "pages/article",
+    "_name": "_bc1c0b46"
+  },
+  {
     "name": "club",
     "path": "/club",
     "component": "/home/maverick/projects/python/sacos/fe/pages/club.vue",
