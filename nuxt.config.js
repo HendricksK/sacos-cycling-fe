@@ -8,6 +8,35 @@ export default {
   router: {
     base: '/'
   },
+  head: {
+    script: [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=UA-176051888-1'
+      },
+      {
+        src: 'ga.js' //local google analytics call, static call for JS is actually not that great.
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.3/dist/js/bulma-collapsible.min.js'
+      }
+    ],
+    meta: [
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1'
+        }
+      ],
+    link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.3/dist/css/bulma-collapsible.min.css'
+        }
+      ]
+  },
    modules: [
     '@nuxt/http'
   ],

@@ -52,7 +52,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"meta":[],"link":[],"style":[],"script":[]},
+    head: {"script":[{"src":"https:\u002F\u002Fwww.googletagmanager.com\u002Fgtag\u002Fjs?id=UA-176051888-1"},{"src":"ga.js"},{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@creativebulma\u002Fbulma-collapsible@1.0.3\u002Fdist\u002Fjs\u002Fbulma-collapsible.min.js"}],"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Ficon?family=Material+Icons"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@creativebulma\u002Fbulma-collapsible@1.0.3\u002Fdist\u002Fcss\u002Fbulma-collapsible.min.css"}],"style":[]},
 
     router,
     nuxt: {

@@ -25,24 +25,6 @@
         abouturl: process.env.aboutUrl,
         title: process.env.title
       }  
-    },
-    head: {
-      meta: [
-        {
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1'
-        }
-      ],
-      link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.3/dist/css/bulma-collapsible.min.css'
-        }
-      ]
     }
   }
 </script>

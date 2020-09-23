@@ -92,14 +92,6 @@
   export default {
     layout(context) {
         return 'default'
-    },
-    head: {
-      script: [
-        {
-          src:
-            'https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.3/dist/js/bulma-collapsible.min.js'
-        }
-      ]
     }
   }
 </script>
