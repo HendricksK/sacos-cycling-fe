@@ -32,9 +32,6 @@
     	).then(
     		res => res.json()
     	)
-
-        console.log(this.article.Name)
-        console.log(this.article.Article_data)
     },
     methods: {
     	refresh() {
