@@ -4,7 +4,6 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _303f5598 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
-const _bc1c0b46 = () => interopDefault(import('../pages/article.vue' /* webpackChunkName: "pages/article" */))
 const _a184de42 = () => interopDefault(import('../pages/club.vue' /* webpackChunkName: "pages/club" */))
 const _f3afda0a = () => interopDefault(import('../pages/history.vue' /* webpackChunkName: "pages/history" */))
 const _73840994 = () => interopDefault(import('../pages/manager.vue' /* webpackChunkName: "pages/manager" */))
@@ -12,6 +11,8 @@ const _3645a9a1 = () => interopDefault(import('../pages/rider.vue' /* webpackChu
 const _c6d93ef0 = () => interopDefault(import('../pages/store.vue' /* webpackChunkName: "pages/store" */))
 const _2079e2bb = () => interopDefault(import('../pages/test.vue' /* webpackChunkName: "pages/test" */))
 const _633a13f2 = () => interopDefault(import('../pages/track.vue' /* webpackChunkName: "pages/track" */))
+const _52f0f5df = () => interopDefault(import('../pages/article/articles.vue' /* webpackChunkName: "pages/article/articles" */))
+const _c7785cf0 = () => interopDefault(import('../pages/article/_id.vue' /* webpackChunkName: "pages/article/_id" */))
 const _07982ff9 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
@@ -34,10 +35,6 @@ export const routerOptions = {
     path: "/about",
     component: _303f5598,
     name: "about"
-  }, {
-    path: "/article",
-    component: _bc1c0b46,
-    name: "article"
   }, {
     path: "/club",
     component: _a184de42,
@@ -66,6 +63,14 @@ export const routerOptions = {
     path: "/track",
     component: _633a13f2,
     name: "track"
+  }, {
+    path: "/article/articles",
+    component: _52f0f5df,
+    name: "article-articles"
+  }, {
+    path: "/article/:id?",
+    component: _c7785cf0,
+    name: "article-id"
   }, {
     path: "/",
     component: _07982ff9,

@@ -7,13 +7,6 @@
     "_name": "_303f5598"
   },
   {
-    "name": "article",
-    "path": "/article",
-    "component": "/home/maverick/projects/python/sacos/fe/pages/article.vue",
-    "chunkName": "pages/article",
-    "_name": "_bc1c0b46"
-  },
-  {
     "name": "club",
     "path": "/club",
     "component": "/home/maverick/projects/python/sacos/fe/pages/club.vue",
@@ -61,6 +54,20 @@
     "component": "/home/maverick/projects/python/sacos/fe/pages/track.vue",
     "chunkName": "pages/track",
     "_name": "_633a13f2"
+  },
+  {
+    "name": "article-articles",
+    "path": "/article/articles",
+    "component": "/home/maverick/projects/python/sacos/fe/pages/article/articles.vue",
+    "chunkName": "pages/article/articles",
+    "_name": "_52f0f5df"
+  },
+  {
+    "name": "article-id",
+    "path": "/article/:id?",
+    "component": "/home/maverick/projects/python/sacos/fe/pages/article/_id.vue",
+    "chunkName": "pages/article/_id",
+    "_name": "_c7785cf0"
   },
   {
     "name": "index",
