@@ -9,8 +9,8 @@ let dynamicRoutes = () => {
 export default {
   env: {
     //https://cycling.sacoshistory.org
-    baseUrl: 'https://cycling.sacoshistory.org',
-    apiUrl: 'https://sacos-backend-go.herokuapp.com',
+    baseUrl: 'http://localhost:3000',
+    apiUrl: 'http://localhost:6660',
     aboutUrl: 'about',
     articleUri: 'article',
     articleUrl: 'article/articles',

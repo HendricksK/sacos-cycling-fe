@@ -533,7 +533,6 @@ function setLayoutForNextPage (to) {
   if (typeof layout === 'function') {
     layout = layout(app.context)
   }
-
   this.setLayout(layout)
 }
 

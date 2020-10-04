@@ -7,7 +7,7 @@
   		<h1>Articles</h1>
 	    <ul>
 	      	<li v-for="article of articles">
-	      		<a :href="baseurl+'/'+articleuri+'/'+article.Id">{{ article.Name }} - {{article.Author}}</a>
+	      		<a :href="articleuri+'/'+article.Id">{{ article.Name }} - {{article.Author}}</a>
 	      	</li>
 	    </ul>
   	</div>
