@@ -150,7 +150,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {"baseUrl":"http://localhost:3000","apiUrl":"http://localhost:6660","aboutUrl":"about","articleUri":"article","title":"sacos-cycling"}
+      env: {"baseUrl":"http://localhost:3000","apiUrl":"http://localhost:6660","aboutUrl":"about","articleUri":"article","articleUrl":"article/articles","title":"sacos-cycling"}
     }
     // Only set once
     if (!process.static && context.req) {

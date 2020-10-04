@@ -8,9 +8,12 @@
             directions_bike
           </span>
         </a>
+        <a class="navbar-item" style="color:#e3b602" :href="articleurl">
+            Articles
+        </a>
         <a class="navbar-item" style="color:#e3b602" :href="abouturl">
             About
-          </a>
+        </a>
       </div>
     </nav>
     <Nuxt />
@@ -23,6 +26,7 @@
       return {
         baseurl: process.env.baseUrl,
         abouturl: process.env.aboutUrl,
+        articleurl: process.env.articleUrl,
         title: process.env.title
       }  
     }

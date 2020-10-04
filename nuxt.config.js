@@ -5,6 +5,7 @@ export default {
     apiUrl: process.env.API_URL || 'http://localhost:6660',
     aboutUrl: 'about',
     articleUri: 'article',
+    articleUrl: 'article/articles',
     title: 'sacos-cycling'
   },
   target: 'static',
