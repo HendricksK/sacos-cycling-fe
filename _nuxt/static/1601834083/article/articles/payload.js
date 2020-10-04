@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/article/articles", (function(a){return {data:[{}],fetch:[{baseurl:"https:\u002F\u002Fhendricksk.github.io\u002Fsacos-cycling-fe",articleuri:"article",articles:[{Id:1,Name:"Defectors not heroes \"Cycling\"",Article_data:a,Url:a,Datetime:"2020-09-29T20:21:27.026Z",Author:"Michael Williams"}]}],mutations:void 0}}("")));
