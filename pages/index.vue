@@ -1,9 +1,11 @@
 <template>
-  <div class="container" id="news">
+  <div class="container" id="home">
     <section class="section">
       <h1 class="title">
-          Sacos Cycling History
+            Sacos Cycling History
       </h1>
+    </section>
+    <section class="section">  
       <div class="container">
         <h1 class="title"></h1>
         <div class="tile is-ancestor">
