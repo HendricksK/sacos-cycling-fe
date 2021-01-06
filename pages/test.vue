@@ -3,12 +3,12 @@
         <p v-if="$fetchState.pending">Fetching home</p>
         <p v-else-if="$fetchState.error">An error occured</p> 
 
-        <section class="section">
+        <section class="section" id="heading">
           <h1 class="title">
                 {{ heading.heading }}
           </h1>
         </section>
-        <section class="section">  
+        <section class="section" id="banner">  
               <div class="container">
                 <h1 class="title"></h1>
                 <div class="tile is-ancestor">
@@ -18,45 +18,46 @@
                           <div v-for="banner of banner.banner" class="tile is-parent is-vertical">
                             <article class="tile is-child notification is-info">
                               <figure class="image">
-                                <img v-bind:src="{{banner.img_url}}">
+                                <img :src="banner.image[0].img_url">
                               </figure>
 
-                              <div v-if="banner.image.collapsable" class="accordion">
+                              <div v-if="banner.image[0].collapsable" class="accordion">
                                 <div class="col">
                                   <div class="tabs">
                                     <div class="tab">
                                       <input type="checkbox" id="chck1">
                                       <label class="tab-label" for="chck1">Basil Williams</label>
                                       <div class="tab-content">
-                                        {{banner.data}}
+                                        {{banner.image[0].data}}
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <p v-else class="subtitle">{{banner.data}}</p>
+                              <p v-else class="subtitle">{{banner.image[0].data}}</p>
 
                             </article>
                           </div>
-
-                          <!-- <div class="tile is-parent is-vertical">
-                            <article class="tile is-child notification is-info">
-                              <figure class="image">
-                                <img src="https://github.com/HendricksK/sacos_images/blob/master/Mark%20Hendricks%20Winning%20Last%20Stage%20of%20Tour%20de%20Boland.jpg?raw=true">
-                              </figure>
-                              <p class="subtitle">Mark Hendricks Winning Last Stage of Tour de Boland</p>
-                            </article>
-                          </div> -->
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="section" id="content">
+          <div class="columns is-mobile">
+            <div class="column">
+              <div class="description">
+                <span class="content" v-html="content.content"></span>
+              </div>
+            </div>
+          </div>
+          <div class="links">
+            <a :href="'mailto:' + content.contact" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow">{{content.contact}}</a>
+          </div>
+        </section>
 
-        <div class="content" v-html="content.content"></div>
-            
+        
+
     </div>
 </template>
 
@@ -100,12 +101,7 @@
       this.banner = JSON.parse(banner.Page_data_string)
       this.content = JSON.parse(content.Page_data_string)
 
-      console.log(this.banner.banner)
-      console.log(this.banner.banner.length)
-
-      for(var x = 0; x < this.banner.banner.length; x++) {
-        console.log(this.banner.banner[x].image)
-      }
+      // console.log(this.content)
 
     },
     methods: {
