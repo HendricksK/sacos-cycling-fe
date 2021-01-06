@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/test", {data:[{}],fetch:[{_error:{message:"Unexpected token u in JSON at position 0",statusCode:500}}],mutations:void 0});
