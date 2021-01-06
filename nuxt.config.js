@@ -14,6 +14,8 @@ export default {
     aboutUrl: 'about',
     articleUri: 'article',
     articleUrl: 'article/articles',
+    pageUri: 'page',
+    pageUrl: 'page/',
     title: 'sacos-cycling'
   },
   target: 'static',
