@@ -1,78 +1,63 @@
 <template>
-    <div class="container" id="home">
-        <p v-if="$fetchState.pending">Fetching home</p>
-        <p v-else-if="$fetchState.error">An error occured</p> 
-
-        <section class="section" id="heading">
-          <h1 class="title">
-                {{ heading.heading }}
-          </h1>
-        </section>
-        <section class="section" id="banner">  
-              <div class="container">
-                <h1 class="title"></h1>
-                <div class="tile is-ancestor">
-                    <div class="tile is-vertical is-12">
-                        <div class="tile">
-
-                          <div v-for="banner of banner.banner" class="tile is-parent is-vertical">
-                            <article class="tile is-child notification is-info">
-                              <figure class="image">
-                                <img :src="banner.image[0].img_url">
-                              </figure>
-
-                              <div v-if="banner.image[0].collapsable" class="accordion">
-                                <div class="col">
-                                  <div class="tabs">
-                                    <div class="tab">
-                                      <input type="checkbox" id="chck1">
-                                      <label class="tab-label" for="chck1">Basil Williams</label>
-                                      <div class="tab-content">
-                                        {{banner.image[0].data}}
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <p v-else class="subtitle">{{banner.image[0].data}}</p>
-
-                            </article>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="content">
-          <div class="columns is-mobile">
-            <div class="column">
-              <div class="description">
-                <span class="content" v-html="content.content"></span>
-              </div>
-            </div>
-          </div>
-          <div class="links">
-            <a :href="'mailto:' + content.contact" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow">{{content.contact}}</a>
-          </div>
-        </section>
-
-        
-
+  <div class="container">
+    <div class="columns">
+      <div class="column is-four-fifths slider-container">
+        <vueper-slides 
+          class="no-shadow"
+          :visible-slides="3"
+          slide-multiple
+          :gap="3"
+          :slide-ratio="1 / 4"
+          :dragging-distance="200"
+          :breakpoints="{ 800: { visibleSlides: 1 } }"
+          >
+          <vueper-slide v-for="(slide, i) in banner.banner" 
+            :key="i" 
+            :content="slide.image[0].img_url"
+            :image="slide.image[0].img_url" 
+            :style="'background-color:#e3b602'"/>
+        </vueper-slides>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
+  // In your Vue.js component.
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
+
   export default {
+    
     layout(context) {
         return 'default'
     },
+    components: { VueperSlides, VueperSlide },
     data() {
       return {
         baseurl: process.env.baseUrl,
         page: {},
         heading: {},
         banner: {},
-        content: {}
+        content: {},
+        // slides: [
+        //   {
+        //     title: 'Slide #1',
+        //     content: 'Slide content.'
+        //   },
+        //   {
+        //     title: 'Slide #2',
+        //     content: 'Slide content.'
+        //   },
+        //   {
+        //     title: 'Slide #3',
+        //     content: 'Slide content.'
+        //   },
+        //   {
+        //     title: 'Slide #4',
+        //     content: 'Slide content.'
+        //   }
+        // ]
       }
     },
     async fetch() {
@@ -100,14 +85,19 @@
       this.heading = JSON.parse(heading.Page_data_string)
       this.banner = JSON.parse(banner.Page_data_string)
       this.content = JSON.parse(content.Page_data_string)
+      this.slider_number = this.banner.banner.length;
 
-      // console.log(this.content)
+      console.log(this.banner)
 
     },
     methods: {
       refresh() {
         this.$fetch()
       }
+    },
+    mounted () {
+       // Your JQuery code here
     }
   }
+
 </script>

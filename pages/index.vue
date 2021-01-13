@@ -14,8 +14,7 @@
                 <div class="tile is-ancestor">
                     <div class="tile is-vertical is-12">
                         <div class="tile">
-
-                          <div v-for="banner of banner.banner" class="tile is-parent is-vertical">
+                          <div v-for="banner of banner.banner" class="tile is-parent is-vertical home-slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
                             <article class="tile is-child notification is-info">
                               <figure class="image">
                                 <img :src="banner.image[0].img_url">
@@ -60,9 +59,9 @@
 
     </div>
 </template>
-
 <script>
   export default {
+    
     layout(context) {
         return 'default'
     },
@@ -100,14 +99,19 @@
       this.heading = JSON.parse(heading.Page_data_string)
       this.banner = JSON.parse(banner.Page_data_string)
       this.content = JSON.parse(content.Page_data_string)
+      this.slider_number = this.banner.banner.length;
 
-      // console.log(this.content)
+
 
     },
     methods: {
       refresh() {
         this.$fetch()
       }
+    },
+    mounted () {
+       // Your JQuery code here
+      
     }
   }
 </script>

@@ -22,3 +22,25 @@
 .article-display {
 	white-space: break-spaces;
 }
+
+.slider-container {
+	margin: 0 auto;
+}
+
+.vueperslides__bullets--outside .vueperslides__bullet .default {
+    border-color: #000;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.vueperslides__bullets--outside .vueperslides__bullet--active .default {
+    background-color: #000;
+}
+
+.vueperslides__arrow svg {
+	width:3em;
+}
+
+.vueperslide__image {
+	background-position: top;
+}
