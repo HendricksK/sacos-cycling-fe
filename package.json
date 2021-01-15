@@ -13,10 +13,13 @@
   "dependencies": {
     "@creativebulma/bulma-collapsible": "^1.0.4",
     "@nuxt/http": "^0.5.11",
+    "@splidejs/vue-splide": "^0.3.5",
     "bulma": "^0.9.0",
     "bulma-accordion": "^2.0.1",
     "nuxt": "^2.14.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "vue-tiny-slider": "^0.1.39",
+    "vueperslides": "^2.12.1"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",
