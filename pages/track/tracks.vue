@@ -7,7 +7,7 @@
   		<h1>Tracks</h1>
 	    <ul>
 	      	<li v-for="track of tracks">
-	      		<a :href="trackuri+'/'+track.Id">{{ track.Name }}</a>
+	      		<a :href="trackuri+track.Id">{{ track.Name }}</a>
 	      	</li>
 	    </ul>
   	</div>
@@ -27,7 +27,7 @@
     },
     async fetch() {
     	this.articles = await fetch(
-    		process.env.apiUrl+'/tracks'
+    		process.env.apiUrl+trackUri+trackUrl
     	).then(
     		res => res.json()
     	)

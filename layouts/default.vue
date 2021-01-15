@@ -25,7 +25,7 @@
       return {
         baseurl: process.env.baseUrl,
         abouturl: process.env.aboutUrl,
-        articleurl: process.env.articleUrl,
+        articleurl: process.env.articleUri + process.env.articleUrl,
         title: process.env.title
       }  
     }

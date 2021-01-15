@@ -76,19 +76,20 @@
     async fetch() {
       
       var heading, banner, content
+      var pageid = 1
 
       heading = await fetch(
-        process.env.apiUrl + '/' + process.env.postUrl + '1' + '/heading' 
+        process.env.apiUrl + process.env.postUrl + '/' + pageid + '/heading' 
       ).then(
         res => res.json()
       ),
       banner = await fetch(
-        process.env.apiUrl + '/' + process.env.postUrl + '1' + '/banner' 
+        process.env.apiUrl + process.env.postUrl + '/' + pageid + '/banner' 
       ).then(
         res => res.json()
       ),
       content = await fetch(
-        process.env.apiUrl + '/' + process.env.postUrl + '1' + '/content' 
+        process.env.apiUrl + process.env.postUrl + '/' + pageid + '/content' 
       ).then(
         res => res.json()
       )

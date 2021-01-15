@@ -77,23 +77,24 @@ export default {
     },
     async fetch() {
       
-      var heading, banner, content
+    var heading, banner, content
+    var pageid = 1
 
-      heading = await fetch(
-        process.env.apiUrl + '/' + process.env.postUrl + '1' + '/heading' 
-      ).then(
+    heading = await fetch (
+        process.env.apiUrl + process.env.postUrl + '/' + pageid + '/heading' 
+    ).then(
         res => res.json()
-      ),
-      banner = await fetch(
-        process.env.apiUrl + '/' + process.env.postUrl + '1' + '/banner' 
-      ).then(
+    ),
+    banner = await fetch (
+        process.env.apiUrl + process.env.postUrl + '/' + pageid + '/banner' 
+    ).then(
         res => res.json()
-      ),
-      content = await fetch(
-        process.env.apiUrl + '/' + process.env.postUrl + '1' + '/content' 
-      ).then(
+    ),
+    content = await fetch (
+        process.env.apiUrl + process.env.postUrl + '/' + pageid + '/content' 
+    ).then(
         res => res.json()
-      )
+    )
 
       // Still trying to learn JSON marshalling in GO, until then I will be using JSON.parse on front end not ideal but will work
 
