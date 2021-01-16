@@ -42,7 +42,7 @@ export default {
   generate: {
       routes: function () {
             let articleids = () => { 
-               return axios.get(apiUrl + '/articleids').then(res => {
+               return axios.get('https://sacos-backend-go.herokuapp.com/articleids').then(res => {
                  return res.data.map(article => `/article/${article.Id}`)
                })
              }
@@ -54,7 +54,8 @@ export default {
             return Promise.all([articleids, riderids]).then(values => {
                 return values.join().split(',');
             })
-        }
+        },
+        fallback: "404.html"
   },
   head: {
     script: [
@@ -62,10 +63,7 @@ export default {
         src: 'https://www.googletagmanager.com/gtag/js?id=UA-176051888-1'
       },
       {
-        src: 'ga.js' //local google analytics call, static call for JS is actually not that great.
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.3/dist/js/bulma-collapsible.min.js'
+        src: 'https://cycling.sacoshistory.org/ga.js' //local google analytics call, static call for JS is actually not that great.
       }
     ],
     meta: [

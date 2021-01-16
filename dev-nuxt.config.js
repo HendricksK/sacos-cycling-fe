@@ -60,10 +60,7 @@ export default {
         src: 'https://www.googletagmanager.com/gtag/js?id=UA-176051888-1'
       },
       {
-        src: 'ga.js' //local google analytics call, static call for JS is actually not that great.
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.3/dist/js/bulma-collapsible.min.js'
+        src: 'https://cycling.sacoshistory.org/ga.js' //local google analytics call, static call for JS is actually not that great.
       }
     ],
     meta: [

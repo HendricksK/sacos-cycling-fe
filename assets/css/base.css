@@ -232,3 +232,6 @@ a:hover {
     width: auto;
 }
 
+#banner-slider .vueperslide {
+    background-color:#e3b602;
+}
