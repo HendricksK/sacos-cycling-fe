@@ -218,3 +218,17 @@ a:hover {
 .accordion .col:last-child {
     margin-left: 1em;
 }
+
+.gallery-list {
+    display: inline-flex;
+}
+
+.gallery-list .image {
+    padding:0.5em;
+}
+
+.gallery-list .image img {
+    max-height: 300px;
+    width: auto;
+}
+
