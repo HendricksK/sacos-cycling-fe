@@ -1,16 +1,26 @@
 <template>
-  	<div>
-  		<p v-if="$fetchState.pending">Fetching articles</p>
-		  <p v-else-if="$fetchState.error">An error occured</p>
-  		<br>
-        
-  		<h1>Articles</h1>
-	    <ul>
-	      	<li v-for="article of articles">
-	      		<a :href="articleuri+'/'+article.Id">{{ article.Name }} - {{article.Author}}</a>
-	      	</li>
-	    </ul>
-  	</div>
+    <div>
+      <p v-if="$fetchState.pending">Fetching riders</p>
+      <p v-else-if="$fetchState.error">An error occured</p>
+      <br>
+      <div class="container">
+      <section class="section" id="heading">  
+        <h1 class="title">Riders</h1>
+      </section>
+      <section class="section" id="riders">
+        <ul class="gallery-list">
+            <li v-for="rider of riders">
+              <a :href="rideruri + '/' + rider.Id + '?rider=' + rider.Url">
+                <figure class="image">
+                  <img :src="rider.Image.image">
+                </figure>
+                {{ rider.Name }}
+              </a>
+            </li>
+        </ul>
+      </section>
+      </div>
+    </div>
 </template>
 
 <script>
@@ -19,23 +29,33 @@
         return 'default'
     },
     data() {
-    	return {
-    		baseurl: process.env.baseUrl,
-    		articleuri: process.env.articleUri,
-    		articles: []
-    	}
+      return {
+        baseurl: process.env.baseUrl,
+        rideruri: process.env.riderUri,
+        riders: []
+      }
     },
     async fetch() {
-    	this.articles = await fetch(
-    		process.env.apiUrl+'/articles'
-    	).then(
-    		res => res.json()
-    	)
+
+      var riders = await fetch (
+        process.env.apiUrl + process.env.riderUrl
+      ).then(
+        res => res.json()
+      )
+
+      for (var i = 0; i < riders.length; i++) {
+        var rider = riders[i]
+        rider.Image = JSON.parse(rider.Rider_data)
+        rider.Url = rider.Name.replace(/ /g, '%20')
+        this.riders.push(rider)
+      }
+
+      console.log(this.riders)
     },
     methods: {
-    	refresh() {
-    		this.$fetch()
-    	}
+      refresh() {
+        this.$fetch()
+      }
     }
   }
 </script>

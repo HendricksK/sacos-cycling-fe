@@ -1,32 +1,60 @@
 import axios from 'axios'
 
-let dynamicRoutes = () => {
- return axios.get('https://sacos-backend-go.herokuapp.com/articleids').then(res => {
-   return res.data.map(article => `/article/${article.Id}`)
- })
-}
-
 export default {
   env: {
     //https://cycling.sacoshistory.org
+    title: 'Sacos Cycling',
     baseUrl: 'https://cycling.sacoshistory.org',
     apiUrl: 'https://sacos-backend-go.herokuapp.com',
-    aboutUrl: 'about',
-    articleUri: 'article',
-    articleUrl: 'article/articles',
-    pageUri: 'page',
-    pageUrl: 'page/',
-    postUri: 'posts',
-    postUrl: 'posts/',
-    title: 'sacos-cycling'
+    aboutUrl: '/about',
+    articleUri: '/article',
+    articleUrl: '/articles',
+    pageUri: '/page',
+    pageUrl: '/page',
+    postUri: '/post',
+    postUrl: '/posts',
+    trackUri: '/track',
+    trackUrl: '/tracks',
+    riderUri: '/rider',
+    riderUrl: '/riders',
+    title: 'Sacos Cycling'
   },
   target: 'static',
   router: {
-    base: '/'
+    routes: [
+      {
+        name: 'index',
+        path: '/',
+        component: 'pages/index.vue'
+      },
+      {
+        name: 'article',
+        path: '/article/:id?',
+        component: 'pages/article/_id.vue'
+      },
+      {
+        name: 'rider',
+        path: '/rider/:id?',
+        component: 'pages/rider/_id.vue'
+      },
+    ]
   },
   generate: {
-    // https://css-tricks.com/creating-dynamic-routes-in-a-nuxt-application/
-    routes: dynamicRoutes
+      routes: function () {
+            let articleids = () => { 
+               return axios.get(apiUrl + '/articleids').then(res => {
+                 return res.data.map(article => `/article/${article.Id}`)
+               })
+             }
+            let riderids = () => { 
+               return axios.get(apiUrl + '/riderids').then(res => {
+                 return res.data.map(article => `/rider/${rider.Id}`)
+               })
+             }
+            return Promise.all([articleids, riderids]).then(values => {
+                return values.join().split(',');
+            })
+        }
   },
   head: {
     script: [
