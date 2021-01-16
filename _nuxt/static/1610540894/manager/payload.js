@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/manager", {data:[{}],fetch:[],mutations:void 0});

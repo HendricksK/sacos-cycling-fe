@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/rider", {data:[{}],fetch:[],mutations:void 0});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/track/tracks", {data:[{}],fetch:[{_error:{message:"trackUri is not defined",statusCode:500}}],mutations:void 0});

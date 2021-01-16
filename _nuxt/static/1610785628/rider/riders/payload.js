@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/rider/riders", {data:[{}],fetch:[{_error:{message:"invalid json response body at https:\u002F\u002Fsacos-backend-go.herokuapp.com\u002Friders reason: Unexpected token \u003C in JSON at position 0",type:"invalid-json",statusCode:500}}],mutations:void 0});
