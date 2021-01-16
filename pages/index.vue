@@ -1,70 +1,71 @@
 <template>
-    <div class="container" id="home">
-        <p v-if="$fetchState.pending">Fetching home</p>
-        <p v-else-if="$fetchState.error">An error occured</p> 
+  
+  <div class="container" id="home">
+    <p v-if="$fetchState.pending">Fetching home</p>
+    <p v-else-if="$fetchState.error">An error occured</p> 
 
-        <section class="section" id="heading">
-          <h1 class="title">
-                {{ heading.heading }}
-          </h1>
-        </section>
-        <section class="section" id="banner">  
-              <div class="container">
-                <h1 class="title"></h1>
-                <div class="tile is-ancestor">
-                    <div class="tile is-vertical is-12">
-                        <div class="tile">
-                          <div v-for="banner of banner.banner" class="tile is-parent is-vertical home-slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-                            <article class="tile is-child notification is-info">
-                              <figure class="image">
-                                <img :src="banner.image[0].img_url">
-                              </figure>
-
-                              <div v-if="banner.image[0].collapsable" class="accordion">
-                                <div class="col">
-                                  <div class="tabs">
-                                    <div class="tab">
-                                      <input type="checkbox" id="chck1">
-                                      <label class="tab-label" for="chck1">Basil Williams</label>
-                                      <div class="tab-content">
-                                        {{banner.image[0].data}}
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <p v-else class="subtitle">{{banner.image[0].data}}</p>
-
-                            </article>
-                          </div>
-                        </div>
-                    </div>
+    <section class="section" id="heading">
+      <h1 class="title">
+            {{ heading.heading }}
+      </h1>
+    </section>
+    <section class="section" id="banner">  
+        <div class="container">
+            <div class="columns">
+                <div class="column is-four-fifths slider-container">
+                    <vueper-slides 
+                      class="no-shadow" id="banner-slider"
+                      :visible-slides="3"
+                      slide-multiple
+                      :gap="3"
+                      :slide-ratio="1 / 4"
+                      :dragging-distance="200"
+                      :breakpoints="{ 800: { visibleSlides: 1 } }"
+                      >
+                      <vueper-slide class="show-more" v-for="(slide, i) in banner.banner" 
+                        :key="i" 
+                        :content="slide.image[0].data"
+                        :image="slide.image[0].img_url"
+                        :style="'background-color:#e3b602'">
+                        <template v-slot:loader>
+                          <i class="icon icon-loader spinning"></i>
+                          <span>Loading...</span>
+                        </template>
+                        </vueper-slide>
+                      </vueper-slides>
                 </div>
-            </div>
-        </section>
-        <section class="section" id="content">
-          <div class="columns is-mobile">
-            <div class="column">
-              <div class="description">
-                <span class="content" v-html="content.content"></span>
-              </div>
-            </div>
+            </div>    
+        </div>
+    </section>
+     <section class="section" id="content">
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="description">
+            <span class="content" v-html="content.content"></span>
           </div>
-          <div class="links">
-            <a :href="'mailto:' + content.contact" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow">{{content.contact}}</a>
-          </div>
-        </section>
+        </div>
+      </div>
+      <div class="links">
+        <a :href="'mailto:' + content.contact" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow">{{content.contact}}</a>
+      </div>
+    </section>
 
-        
-
-    </div>
+  </div>
 </template>
 <script>
-  export default {
+  // In your Vue.js component.
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
     
+
+export default {
+    mounted(){
+        this.init()
+    },
     layout(context) {
         return 'default'
     },
+    components: { VueperSlides, VueperSlide },
     data() {
       return {
         baseurl: process.env.baseUrl,
@@ -77,19 +78,20 @@
     async fetch() {
       
       var heading, banner, content
+      var pageid = 1
 
       heading = await fetch(
-        process.env.apiUrl + '/' + process.env.postUrl + '1' + '/heading' 
+        process.env.apiUrl + process.env.postUrl + '/' + pageid + '/heading' 
       ).then(
         res => res.json()
       ),
       banner = await fetch(
-        process.env.apiUrl + '/' + process.env.postUrl + '1' + '/banner' 
+        process.env.apiUrl + process.env.postUrl + '/' + pageid + '/banner' 
       ).then(
         res => res.json()
       ),
       content = await fetch(
-        process.env.apiUrl + '/' + process.env.postUrl + '1' + '/content' 
+        process.env.apiUrl + process.env.postUrl + '/' + pageid + '/content' 
       ).then(
         res => res.json()
       )
@@ -100,18 +102,38 @@
       this.banner = JSON.parse(banner.Page_data_string)
       this.content = JSON.parse(content.Page_data_string)
       this.slider_number = this.banner.banner.length;
-
-
-
     },
     methods: {
-      refresh() {
-        this.$fetch()
-      }
-    },
-    mounted () {
-       // Your JQuery code here
-      
+        refresh() {
+            this.$fetch()
+        },
+        init(){
+
+            var show_more_btns =  document.getElementsByClassName('show-more')
+            if (typeof(show_more_btns) != 'undefined' && show_more_btns != null) {
+                for (var i = 0; i < show_more_btns.length; i++) {
+                    show_more_btns[i].children[0].setAttribute('id', 'show-more-'+i); 
+                    var show_more_id = 'show-more-'+i
+                    document.getElementById(show_more_id).addEventListener('click', showMoreOpenClose);
+                }
+            }
+
+            function showMoreOpenClose(e) {
+                if (document.getElementById(e.target.parentElement.id).classList.length > 1) {
+                    var class_list = document.getElementById(e.target.parentElement.id).classList
+                    if (class_list[1] === 'open') {
+                        document.getElementById(e.target.parentElement.id).classList.remove('open')
+                        document.getElementById(e.target.parentElement.id).classList.add('closed')
+                    } else if (class_list[1] === 'closed') {
+                        document.getElementById(e.target.parentElement.id).classList.remove('closed')
+                        document.getElementById(e.target.parentElement.id).classList.add('open')
+                    }          
+                } else {
+                    document.getElementById(e.target.parentElement.id).classList.add('open')
+                }
+            }
+        }
     }
-  }
+}
+
 </script>
