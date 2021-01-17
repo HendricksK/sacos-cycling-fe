@@ -28,7 +28,7 @@
         // This is was so helpful https://codesandbox.io/s/github/mercs600/nuxt-ssr-guide/tree/master/?fontsize=14&hidenavigation=1&initialpath=/fetch-blog&module=/pages/fetch-blog/index.vue&theme=dark&file=/pages/fetch-blog/_id.vue
         // this.$route.params.id was the key
     	this.article = await fetch(
-    		process.env.apiUrl+`/article/${this.$route.params.id}`
+    		process.env.apiUrl + process.env.articleUri + `/${this.$route.params.id}`
     	).then(
     		res => res.json()
     	)
