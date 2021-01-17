@@ -219,16 +219,31 @@ a:hover {
     margin-left: 1em;
 }
 
-.gallery-list {
-    display: inline-flex;
+#banner-slider .vueperslide {
+    background-color:#e3b602;
 }
 
-.gallery-list .image {
+#riders .gallery-list .image {
     padding:0.5em;
 }
 
-.gallery-list .image img {
+#riders .gallery-list .image img {
     max-height: 300px;
     width: auto;
+}
+
+#riders .gallery-list span {
+    list-style: none;
+    min-width: 300px;
+}
+
+#riders .gallery-list .image img {
+    max-height: 300px;
+    width: auto;
+    margin: 0 auto;
+}
+
+#riders .gallery-list .rider-container {
+    float: left;
 }
 
