@@ -11,6 +11,9 @@
         <a class="navbar-item" style="color:#e3b602" :href="articleurl">
             Articles
         </a>
+        <a class="navbar-item" style="color:#e3b602" :href="riderurl">
+            Riders
+        </a>
         <a class="navbar-item" style="color:#e3b602" :href="abouturl">
             About
         </a>
@@ -26,6 +29,7 @@
         baseurl: process.env.baseUrl,
         abouturl: process.env.aboutUrl,
         articleurl: process.env.articleUri + process.env.articleUrl,
+        riderurl: process.env.riderUri + process.env.riderUrl,
         title: process.env.title
       }  
     }

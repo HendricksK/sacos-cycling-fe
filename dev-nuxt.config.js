@@ -90,12 +90,6 @@ export default {
     '@/assets/css/bulma.css', // Adding bulma
     '@/assets/css/base.css', //base css, will be replaced with bulma eeventually
     '@/assets/css/overrides.css', //overrides css, will override base and bulma
-  ],
-  plugins: [
-    { 
-      src: '~plugins/ga.js',
-      mode: 'client' 
-    }
   ]
 }
 
